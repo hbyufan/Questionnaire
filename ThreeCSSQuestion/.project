@@ -3,11 +3,8 @@
 	<name>ThreeCSSQuestion</name>
 	<comment></comment>
 	<projects>
-		<project>MessageLib</project>
-		<project>CommonLib</project>
-		<project>ToolsLib</project>
-		<project>QuestionNaireMessageLib</project>
-		<project>QuestionNaireDBLib</project>
+		<project>ThreeCSSQuestionDBLib</project>
+		<project>ThreeCSSQuestionMsg</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

@@ -13,10 +13,7 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/CommonLib"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/MessageLib"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/ToolsLib"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/QuestionNaireDBLib"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/QuestionNaireMessageLib"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ThreeCSSQuestionDBLib"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ThreeCSSQuestionMsg"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
