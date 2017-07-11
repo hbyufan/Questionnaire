@@ -1,0 +1,13 @@
+syntax = "proto3";
+package protobuf.http;
+message QuestionAnswerC{
+	int32 hOpCode=1;
+	repeated string questionList=2;
+	repeated string questionOtherList=3;
+	repeated string inputList=4;
+	repeated string textAreaList=5;
+	string questionId=6;
+}
+message QuestionAnswerS{
+	int32 hOpCode=1;
+}

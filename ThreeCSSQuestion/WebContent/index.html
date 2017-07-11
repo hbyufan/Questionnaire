@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>调查问卷</title>
+    <script src="js/lib/commonjs.js?v=v1.0.0" type="text/javascript"></script>
+    <link rel="stylesheet" href="css/pure.css">
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="css/grids-responsive-old-ie.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="css/grids-responsive.css">
+    <!--<![endif]-->
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/layouts/index.css">
+</head>
+<script type="text/javascript">
+
+    $T.version.loadScript("js/lib/jquery.min.js");
+    $T.version.loadScript("js/lib/Math.uuid.js");
+    $T.version.loadScript("js/lib/jquery.cookie.js");
+    //加载内部类
+    $T.version.loadScript("js/app/NotificationExt.js");
+    $T.version.loadScript("js/app/Url.js");
+    $T.version.loadScript("js/app/CookieParam.js");
+    $T.version.loadScript("js/app/CookieName.js");
+    $T.version.loadScript("js/app/IndexMediator.js");
+
+
+    window.onload = function () {
+        //初始化内部类
+        $T.version.init();
+        //初始化过滤器
+        var testFilter = new TestFilter();
+        $T.httpResultFilter.addFilter(testFilter);
+        //初始化控制器
+        $T.indexMediator.init();
+        $T.register.register($T.indexMediator);
+
+    }
+</script>
+<body>
+<div class="title"><h3>选择问卷</h3></div>
+<div class="pure-g choose">
+    <div class="pure-u-1 pure-u-md-1-2 buttonContent">
+        <button class="pure-button bigButton jiang" id="speakButton">
+            <i class="fa fa-smile-o"></i>
+            我想讲
+        </button>
+    </div>
+    <div class="pure-u-1 pure-u-md-1-2 buttonContent">
+        <button class="pure-button bigButton ting" id="listenButton">
+            <i class="fa fa-thumbs-up"></i>
+            我想听
+        </button>
+    </div>
+</div>
+</body>
+</html>

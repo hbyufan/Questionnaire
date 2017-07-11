@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="ThreeCSSQuestion">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <dependent-module archiveName="MessageLib.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/MessageLib/MessageLib">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="CommonLib.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/CommonLib/CommonLib">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-pool2-2.4.2.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/CommonLib/lib/commons-pool2-2.4.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="httpcore-4.4.6.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/CommonLib/lib/httpcore-4.4.6.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jedis-2.9.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/CommonLib/lib/jedis-2.9.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-configuration-1.10.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/CommonLib/lib/commons-configuration-1.10.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-collections-3.2.2.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/CommonLib/lib/commons-collections-3.2.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="httpmime-4.5.2.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/CommonLib/lib/httpmime-4.5.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="slf4j-log4j12-1.7.22.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/CommonLib/lib/slf4j-log4j12-1.7.22.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="httpclient-4.5.2.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/CommonLib/lib/httpclient-4.5.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="log4j-1.2.17.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/CommonLib/lib/log4j-1.2.17.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-lang-2.6.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/CommonLib/lib/commons-lang-2.6.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-beanutils-1.9.3.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/CommonLib/lib/commons-beanutils-1.9.3.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-codec-1.10.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/CommonLib/lib/commons-codec-1.10.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="protobuf-java-format-1.4.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/MessageLib/lib/protobuf-java-format-1.4.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="mybatis-3.4.2.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/CommonLib/lib/mybatis-3.4.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-io-2.5.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/CommonLib/lib/commons-io-2.5.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="mina-core-2.0.16.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/CommonLib/lib/mina-core-2.0.16.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="slf4j-api-1.7.22.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/CommonLib/lib/slf4j-api-1.7.22.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="protobuf-java-3.1.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/MessageLib/lib/protobuf-java-3.1.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ezmorph-1.0.6.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/CommonLib/lib/ezmorph-1.0.6.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-fileupload-1.3.2.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/CommonLib/lib/commons-fileupload-1.3.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-logging-1.2.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/CommonLib/lib/commons-logging-1.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="mariadb-java-client-1.5.7.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/CommonLib/lib/mariadb-java-client-1.5.7.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="json-lib-2.4-jdk15.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/CommonLib/lib/json-lib-2.4-jdk15.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ToolsLib.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/ToolsLib/ToolsLib">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="mongo-java-driver-3.4.2.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/CommonLib/lib/mongo-java-driver-3.4.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="gson-2.8.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/CommonLib/lib/gson-2.8.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="QuestionNaireMessageLib.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/QuestionNaireMessageLib/QuestionNaireMessageLib">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="QuestionNaireDBLib.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/QuestionNaireDBLib/QuestionNaireDBLib">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="context-root" value="ThreeCSSQuestion"/>
+        <property name="java-output-path" value="/ThreeCSSQuestion/build/classes"/>
+    </wb-module>
+</project-modules>

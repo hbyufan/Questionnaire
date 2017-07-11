@@ -1,0 +1,52 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.7em;
+    color: #7f8c8d;
+    font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label {
+    color: #34495e;
+}
+
+.title {
+    font-size: 20px;
+    text-align: center;
+    overflow: hidden;
+    background: #2d3e50;
+}
+
+.title h3 {
+    color: white;
+}
+
+.choose {
+    width: 50%;
+    margin: auto;
+    font-size: 30px;
+}
+
+.bigButton {
+    width: 80%;
+    height: 200px;
+    margin-top: 10px;
+}
+
+.jiang {
+    color: #269abc;
+}
+
+.ting {
+    color: #5cb85c;
+}

@@ -1,0 +1,111 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 2em;
+    color: #7f8c8d;
+    font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label {
+    color: #34495e;
+}
+
+.title {
+    font-size: 20px;
+    text-align: center;
+    overflow: hidden;
+    background: #2d3e50;
+}
+
+.title h3 {
+    color: white;
+}
+
+.miaoshu {
+    width: 90%;
+    font-size: 14px;
+    margin: auto;
+    overflow: hidden;
+    color: #2d3e50;
+    padding: 10px;
+}
+
+.red {
+    color: #b92c28;
+}
+
+.question {
+    width: 90%;
+    margin: auto;
+    border: 1px solid #2d3e50;
+    border-radius: 5px;
+}
+
+.question_type {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    color: #122b40;
+    font-weight: bold;
+    font-size: 20px;
+    border-bottom: 1px solid #2d3e50;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.question_content {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.question_title {
+    padding: 5px;
+    padding-left: 0px;
+    font-weight: bold;
+    color: #122b40;
+}
+
+.zizhu {
+    color: #b92c28;
+}
+
+.fromset {
+    width: 100%;
+}
+
+.tijiao {
+    width: 50%;
+    height: 50px;
+    margin: auto;
+}
+
+.footer {
+    width: 90%;
+    overflow: hidden;
+    text-align: center;
+    font-size: 40px;
+    color: #122b40;
+    padding: 60px;
+    border: 1px solid #122b40;
+    margin: auto;
+    border-radius: 5px;
+}
+
+.othersall {
+    width: 50%;
+    height: 100px;
+}
+.gangwei{
+    width: 100%;
+}
