@@ -3,109 +3,116 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-
-body {
-    line-height: 2em;
-    color: #7f8c8d;
-    font-size: 16px;
+body{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+    SimSun, sans-serif;
 }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-label {
-    color: #34495e;
-}
-
 .title {
-    font-size: 20px;
-    text-align: center;
+    background: #00707f;
     overflow: hidden;
-    background: #2d3e50;
+    text-align: center;
 }
 
 .title h3 {
-    color: white;
+    color: #ffffff;
+    font-size: 20pt;
+    line-height: 30pt;
+    opacity: 0.91;
+
 }
 
-.miaoshu {
-    width: 90%;
-    font-size: 14px;
-    margin: auto;
+.body {
+    width: 100%;
+    background: #ebf8f9;
     overflow: hidden;
-    color: #2d3e50;
-    padding: 10px;
-}
-
-.red {
-    color: #b92c28;
 }
 
 .question {
     width: 90%;
     margin: auto;
-    border: 1px solid #2d3e50;
+    border: 1px solid #00707f;
     border-radius: 5px;
+    margin-top: 10px;
 }
 
 .question_type {
     width: 100%;
     text-align: center;
     padding: 10px;
-    color: #122b40;
+
+    border-bottom: 1px solid #00707f;
+
+    color: #000000;
+    opacity: 0.75;
+    font-size: 16pt;
+    line-height: 24pt;
     font-weight: bold;
-    font-size: 20px;
-    border-bottom: 1px solid #2d3e50;
-    margin: auto;
-    margin-top: 10px;
-    border-radius: 5px;
+    background: #3db8c1;
+
 }
 
 .question_content {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #a7dfe3;
     padding: 10px;
+    font-size: 12pt;
+    line-height: 21pt;
+    opacity: 0.75;
+    color: #000000;
 }
 
 .question_title {
     padding: 5px;
     padding-left: 0px;
     font-weight: bold;
-    color: #122b40;
 }
 
-.zizhu {
-    color: #b92c28;
-}
-
-.fromset {
+.gangwei {
     width: 100%;
+    border-bottom: 1px solid #a7dfe3;
+    padding: 10px;
+    padding-left: 0;
+}
+
+.othersall {
+    width: 50%;
+    height: 150px;
+    border: 1px solid #3db8c1;
+    border-radius: 5px;
+
 }
 
 .tijiao {
     width: 50%;
-    height: 50px;
-    margin: auto;
+    height: 100px;
+    background: #00707f;
+    color: #ffffff;
+    font-size: 16pt;
+    line-height: 24pt;
+    font-weight: bold;
 }
 
 .footer {
     width: 90%;
     overflow: hidden;
     text-align: center;
-    font-size: 40px;
-    color: #122b40;
+
+    font-size: 20pt;
+    line-height: 30pt;
+    opacity: 0.75;
+    color: #000000;
     padding: 60px;
-    border: 1px solid #122b40;
+    border: 1px solid #00707f;
     margin: auto;
     border-radius: 5px;
+    margin-top: 10px;
 }
-
-.othersall {
+.pure-input{
+    border: 1px solid #3db8c1;
+    border-radius: 5px;
+    width: 70%;
+    height: 26pt;
+}
+.pure-inputx{
     width: 50%;
-    height: 100px;
-}
-.gangwei{
-    width: 100%;
 }

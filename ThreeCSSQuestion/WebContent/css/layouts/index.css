@@ -4,37 +4,33 @@
     box-sizing: border-box;
 }
 
-body {
-    line-height: 1.7em;
-    color: #7f8c8d;
-    font-size: 16px;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-label {
-    color: #34495e;
-}
-
 .title {
-    font-size: 20px;
-    text-align: center;
+    background: #00707f;
     overflow: hidden;
-    background: #2d3e50;
+    text-align: center;
 }
 
 .title h3 {
-    color: white;
+    color: #ffffff;
+    font-size: 20pt;
+    line-height: 30pt;
+    opacity: 0.91;
+
 }
 
 .choose {
-    width: 50%;
+    width: 100%;
+    height: 87%;
     margin: auto;
-    font-size: 30px;
+    font-size: 20pt;
+    line-height: 30pt;
+    background: #ebf8f9;
+    position: fixed;
+}
+
+.button-choose {
+    margin: auto;
+    width: 60%;
 }
 
 .bigButton {
@@ -44,9 +40,24 @@ label {
 }
 
 .jiang {
-    color: #269abc;
+    background: #00a2ae;
+
+}
+
+.jiangcolor {
+    color: #ffffff;
+    opacity: 0.91;
 }
 
 .ting {
-    color: #5cb85c;
+    background: #3db8c1;
 }
+
+.tingcolor {
+    color: #000000;
+    opacity: 0.75;
+}
+
+
+
+

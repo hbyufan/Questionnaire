@@ -1,0 +1,132 @@
+.orang-1{
+    color:#fef3eb;
+}
+.orang-2{
+    color:#fde3cf;
+}
+.orang-3{
+    color:#fccca7;
+}
+.orang-4{
+    color:#faaf76;
+}
+.orang-5{
+    color:#f78e3d;
+}
+.orang-6{
+    color:#f56a00;
+}
+.orang-7{
+    color:#d75000;
+}
+.orang-8{
+    color:#b93600;
+}
+.orang-9{
+    color:#991b00;
+}
+.orang-10{
+    color:#7a0000;
+}
+.cyan-1{
+    color:#ebf8f9;
+}
+.cyan-2{
+    color:#cfedf0;
+}
+.cyan-3{
+    color:#a7dfe3;
+}
+.cyan-4{
+    color:#76cdd3;
+}
+.cyan-5{
+    color:#3db8c1;
+}
+.cyan-6{
+    color:#00a2ae;
+}
+.cyan-7{
+    color:#008997;
+}
+.cyan-8{
+    color:#00707f;
+}
+.cyan-9{
+    color:#005667;
+}
+.cyan-10{
+    color:#003c4e;
+}
+.Caption{
+    font-size: 12pt;
+    line-height: 18px;
+}
+.Body1{
+    font-size: 12pt;
+    line-height: 18px;
+}
+.Body2{
+    font-size: 14pt;
+    line-height: 21px;
+}
+.Title{
+    font-size: 14pt;
+    line-height: 21px;
+    font-weight: bold;
+}
+.Headline{
+    font-size: 16pt;
+    line-height: 24px;
+    font-weight: bold;
+}
+.Display1{
+    font-size: 20pt;
+    line-height: 30px;
+}
+.Display2{
+    font-size: 24pt;
+    line-height: 36px;
+}
+.Display3{
+    font-size: 32pt;
+    line-height: 48px;
+}
+body{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+    SimSun, sans-serif;
+}
+.Black75{
+    color:#000000;
+    opacity: 0.75;
+}
+.Black65{
+    color:#000000;
+    opacity: 0.65;
+}
+.Black43{
+    color:#000000;
+    opacity: 0.43;
+}
+.Black25{
+    color:#000000;
+    opacity: 0.25;
+}
+.White97{
+    color:#ffffff;
+    opacity: 0.97;
+}
+.White91{
+    color:#ffffff;
+    opacity: 0.91;
+}
+.Black57{
+    color:#ffffff;
+    opacity: 0.57;
+}
+.Black35{
+    color:#ffffff;
+    opacity: 0.35;
+}
+
