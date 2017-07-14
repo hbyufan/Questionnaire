@@ -11,3 +11,23 @@ message QuestionAnswerC{
 message QuestionAnswerS{
 	int32 hOpCode=1;
 }
+message GetQuestionTypeC{
+	int32 hOpCode=1;
+}
+message GetQuestionTypeS{
+	int32 hOpCode=1;
+	repeated string questionType=2;
+}
+message GetQuestionAnswerC{
+	int32 hOpCode=1;
+	string questionType=2;
+	int32 questionNum=3;
+}
+message GetQuestionAnswerS{
+	int32 hOpCode=1;
+	string questionType=2;
+	int32 questionNum=3;
+	repeated string answer=4;
+	repeated int32 answerNum=5;
+	repeated string otherAnswer=6;
+}
