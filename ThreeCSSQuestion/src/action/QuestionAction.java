@@ -6,7 +6,9 @@ import java.util.List;
 import org.apache.ibatis.session.SqlSession;
 
 import dao.dao.base.QuestionNaireMapper;
+import dao.dao.ext.QuestionNaireMapperExt;
 import dao.model.base.QuestionNaire;
+import dao.model.base.QuestionNaireCriteria;
 import log.LogManager;
 import mbatis.MybatisManager;
 import tool.StringUtil;
@@ -137,12 +139,98 @@ public class QuestionAction {
 				return null;
 			}
 			sqlSession.commit();
-			return questionNaire;
 		} catch (Exception e) {
 			if (sqlSession != null) {
 				sqlSession.rollback();
 			}
 			LogManager.mariadbLog.error("创建答案异常", e);
+			return null;
+		} finally {
+			if (sqlSession != null) {
+				sqlSession.close();
+			}
+		}
+		return questionNaire;
+	}
+
+	public static List<QuestionNaire> getQuestionTypeList() {
+		SqlSession sqlSession = null;
+		try {
+			sqlSession = MybatisManager.getSqlSession();
+			QuestionNaireMapperExt questionNaireMapperExt = sqlSession.getMapper(QuestionNaireMapperExt.class);
+			List<QuestionNaire> list = questionNaireMapperExt.selectQuestionType();
+			if (list == null) {
+				LogManager.mariadbLog.warn("获取问题类型失败");
+				return null;
+			}
+			return list;
+		} catch (Exception e) {
+			if (sqlSession != null) {
+				sqlSession.rollback();
+			}
+			LogManager.mariadbLog.error("获取问题类型失败", e);
+			return null;
+		} finally {
+			if (sqlSession != null) {
+				sqlSession.close();
+			}
+		}
+	}
+
+	public static List<QuestionNaire> getQuestionAnswer(String questionId, int questionNum) {
+		if (StringUtil.stringIsNull(questionId)) {
+			return null;
+		}
+		if (questionNum <= 0 || questionNum > 14) {
+			return null;
+		}
+		SqlSession sqlSession = null;
+		try {
+			sqlSession = MybatisManager.getSqlSession();
+			QuestionNaireMapper questionNaireMapper = sqlSession.getMapper(QuestionNaireMapper.class);
+			QuestionNaireCriteria questionNaireCriteria = new QuestionNaireCriteria();
+			QuestionNaireCriteria.Criteria criteria = questionNaireCriteria.createCriteria();
+			criteria.andQuestionIdEqualTo(questionId);
+			if (questionNum == 1) {
+				criteria.andQuestion1IsNotNull();
+			} else if (questionNum == 2) {
+				criteria.andQuestion2IsNotNull();
+			} else if (questionNum == 3) {
+				criteria.andQuestion3IsNotNull();
+			} else if (questionNum == 4) {
+				criteria.andQuestion4IsNotNull();
+			} else if (questionNum == 5) {
+				criteria.andQuestion5IsNotNull();
+			} else if (questionNum == 6) {
+				criteria.andQuestion6IsNotNull();
+			} else if (questionNum == 7) {
+				criteria.andQuestion7IsNotNull();
+			} else if (questionNum == 8) {
+				criteria.andQuestion8IsNotNull();
+			} else if (questionNum == 9) {
+				criteria.andQuestion9IsNotNull();
+			} else if (questionNum == 10) {
+				criteria.andQuestion10IsNotNull();
+			} else if (questionNum == 11) {
+				criteria.andQuestion11IsNotNull();
+			} else if (questionNum == 12) {
+				criteria.andQuestion12IsNotNull();
+			} else if (questionNum == 13) {
+				criteria.andQuestion13IsNotNull();
+			} else if (questionNum == 14) {
+				criteria.andQuestion14IsNotNull();
+			}
+			List<QuestionNaire> list = questionNaireMapper.selectByExample(questionNaireCriteria);
+			if (list == null) {
+				LogManager.mariadbLog.warn("获取单个问题答案列表失败");
+				return null;
+			}
+			return list;
+		} catch (Exception e) {
+			if (sqlSession != null) {
+				sqlSession.rollback();
+			}
+			LogManager.mariadbLog.error("获取单个问题答案列表异常", e);
 			return null;
 		} finally {
 			if (sqlSession != null) {
