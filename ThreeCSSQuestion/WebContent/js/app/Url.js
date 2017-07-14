@@ -1,4 +1,4 @@
 function Url() {
-    this.url = "http://172.27.108.179:8080/QuestionNaire/s";
+    this.url = "http://lcoalhost:8080/ThreeCSSQuestion/s";
 }
 $T.url = new Url();

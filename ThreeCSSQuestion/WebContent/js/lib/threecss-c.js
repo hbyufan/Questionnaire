@@ -1286,48 +1286,51 @@ $T.jugglerManager = new JugglerManager();
     }
     this.initLoad = function () {
         // 消息
-        this.loadScript("js/commonjs/mvc/Notification.js");
-        this.loadScript("js/commonjs/mvc/ViewManager.js");
+        this.loadScript("js/threecss-c/mvc/Notification.js");
+        this.loadScript("js/threecss-c/mvc/ViewManager.js");
         // http
-        this.loadScript("js/commonjs/http/HttpConfig.js");
-        this.loadScript("js/commonjs/http/HttpResultFilter.js");
-        this.loadScript("js/commonjs/http/SendParam.js");
-        this.loadScript("js/commonjs/http/TestFilter.js");
+        this.loadScript("js/threecss-c/http/HttpConfig.js");
+        this.loadScript("js/threecss-c/http/HttpResultFilter.js");
+        this.loadScript("js/threecss-c/http/SendParam.js");
+        this.loadScript("js/threecss-c/http/TestFilter.js");
 
         // 工具
-        this.loadScript("js/commonjs/tools/ArrayTools.js");
-        this.loadScript("js/commonjs/display/DisplayObject.js");
+        this.loadScript("js/threecss-c/tools/ArrayTools.js");
+        this.loadScript("js/threecss-c/display/DisplayObject.js");
         // 事件
-        this.loadScript("js/commonjs/event/Event.js");
-        this.loadScript("js/commonjs/event/EventPool.js");
-        this.loadScript("js/commonjs/event/EventDispatcher.js");
+        this.loadScript("js/threecss-c/event/Event.js");
+        this.loadScript("js/threecss-c/event/EventPool.js");
+        this.loadScript("js/threecss-c/event/EventDispatcher.js");
         // 动画
-        this.loadScript("js/commonjs/tween/TweenEventType.js");
-        this.loadScript("js/commonjs/tween/DelayedCall.js");
-        this.loadScript("js/commonjs/tween/DelayedCallPool.js");
-        this.loadScript("js/commonjs/tween/Transitions.js");
-        this.loadScript("js/commonjs/tween/Tween.js");
-        this.loadScript("js/commonjs/tween/TweenPool.js");
-        this.loadScript("js/commonjs/tween/Juggler.js");
-        this.loadScript("js/commonjs/tween/JugglerManager.js");
+        this.loadScript("js/threecss-c/tween/TweenEventType.js");
+        this.loadScript("js/threecss-c/tween/DelayedCall.js");
+        this.loadScript("js/threecss-c/tween/DelayedCallPool.js");
+        this.loadScript("js/threecss-c/tween/Transitions.js");
+        this.loadScript("js/threecss-c/tween/Tween.js");
+        this.loadScript("js/threecss-c/tween/TweenPool.js");
+        this.loadScript("js/threecss-c/tween/Juggler.js");
+        this.loadScript("js/threecss-c/tween/JugglerManager.js");
 
-        this.loadScript("js/commonjs/http/HttpUtil.js");
+        this.loadScript("js/threecss-c/http/HttpUtil.js");
         // 资源
-        this.loadScript("js/commonjs/resource/ResourceEventType.js");
-        this.loadScript("js/commonjs/resource/Loader.js");
-        this.loadScript("js/commonjs/resource/ResourceManager.js");
+        this.loadScript("js/threecss-c/resource/ResourceEventType.js");
+        this.loadScript("js/threecss-c/resource/Loader.js");
+        this.loadScript("js/threecss-c/resource/ResourceManager.js");
         // 注册
-        this.loadScript("js/commonjs/Register.js");
+        this.loadScript("js/threecss-c/Register.js");
         // 模块
-        this.loadScript("js/commonjs/module/ModuleData.js");
-        this.loadScript("js/commonjs/module/ModuleManager.js");
+        this.loadScript("js/threecss-c/module/ModuleData.js");
+        this.loadScript("js/threecss-c/module/ModuleManager.js");
         // websocket
-        this.loadScript("js/commonjs/websocket/WebSocketConfig.js");
-        this.loadScript("js/commonjs/websocket/WebSocketEventType.js");
-        this.loadScript("js/commonjs/websocket/WebSocketClient.js");
+        this.loadScript("js/threecss-c/websocket/WebSocketConfig.js");
+        this.loadScript("js/threecss-c/websocket/WebSocketEventType.js");
+        this.loadScript("js/threecss-c/websocket/WebSocketClient.js");
 
     }
-    this.init = function () {
+    this.init = function (name) {
+		if(name != null){
+			this.NAME = name;
+		}
         $T.jugglerManager.init();
     }
 
