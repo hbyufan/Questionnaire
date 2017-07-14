@@ -1,5 +1,6 @@
 function QuestionProxy() {
     this.NAME = "QuestionProxy";
+    this.questionType;
     this.questionAnswer = function (questionList, questionOtherList, inputList, textAreaList, questionId) {
         var data = {
             "hOpCode": 1,
@@ -20,10 +21,51 @@ function QuestionProxy() {
     }
     this.questionAnswerSuccess = function (result, sendParam) {
         alert("感谢你的回答");
-        window.location.href="index.html";
+        window.location.href = "index.html";
     }
     this.questionAnswerFail = function (result, sendParam) {
         alert("提交失败");
+    }
+    this.getQuestionType = function () {
+        var data = {
+            "hOpCode": 2
+        };
+
+        var sendParam = new SendParam();
+        sendParam.successHandle = this.getQuestionTypeSuccess;
+        sendParam.failHandle = this.getQuestionTypeFail;
+        sendParam.object = this;
+        sendParam.data = data;
+        sendParam.url = $T.url.url;
+        $T.httpUtil.send(sendParam);
+    }
+    this.getQuestionTypeSuccess = function (result, sendParam) {
+        this.questionType = result.questionType
+        $T.viewManager.notifyObservers($T.viewManager.getNotification($T.notificationExt.GET_QUESTION_TYPE_SUCCESS, result));
+    }
+    this.getQuestionTypeFail = function (result, sendParam) {
+
+    }
+    this.getQuestionAnswer = function (questionType, questionNum) {
+        var data = {
+            "hOpCode": 3,
+            "questionType": questionType,
+            "questionNum": questionNum
+        };
+
+        var sendParam = new SendParam();
+        sendParam.successHandle = this.getQuestionAnswerSuccess;
+        sendParam.failHandle = this.getQuestionAnswerFail;
+        sendParam.object = this;
+        sendParam.data = data;
+        sendParam.url = $T.url.url;
+        $T.httpUtil.send(sendParam);
+    }
+    this.getQuestionAnswerSuccess = function (result, sendParam) {
+        $T.viewManager.notifyObservers($T.viewManager.getNotification($T.notificationExt.GET_QUESTION_ANSWER_SUCCESS, result));
+    }
+    this.getQuestionAnswerFail = function (result, sendParam) {
+
     }
 }
 $T.questionProxy = new QuestionProxy();

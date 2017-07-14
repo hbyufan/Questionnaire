@@ -3,11 +3,13 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-body{
+
+body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
     SimSun, sans-serif;
 }
+
 .title {
     background: #00707f;
     overflow: hidden;
@@ -107,12 +109,14 @@ body{
     border-radius: 5px;
     margin-top: 10px;
 }
-.pure-input{
+
+.pure-input {
     border: 1px solid #3db8c1;
     border-radius: 5px;
     width: 70%;
     height: 26pt;
 }
-.pure-inputx{
+
+.pure-inputx {
     width: 50%;
 }
