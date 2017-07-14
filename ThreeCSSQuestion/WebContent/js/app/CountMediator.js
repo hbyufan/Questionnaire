@@ -336,6 +336,7 @@ function CountMediator() {
                 this.nowSelectNum = question;
             }
         }
+        $T.questionProxy.getQuestionTopAnswer(this.nowSelect);
         $T.questionProxy.getQuestionAnswer(this.nowSelect, this.nowSelectNum);
     }
     this.createQuestionView = function (question, questionContent, i) {
@@ -362,7 +363,7 @@ function CountMediator() {
 
     }
     // 关心消息数组
-    this.listNotificationInterests = [$T.notificationExt.GET_QUESTION_TYPE_SUCCESS, $T.notificationExt.GET_QUESTION_ANSWER_SUCCESS];
+    this.listNotificationInterests = [$T.notificationExt.GET_QUESTION_TYPE_SUCCESS, $T.notificationExt.GET_QUESTION_ANSWER_SUCCESS, $T.notificationExt.GET_QUESTION_TOP_ANSWER_SUCCESS];
     // 关心的消息处理
     this.handleNotification = function (data) {
         switch (data[0].name) {
@@ -372,8 +373,53 @@ function CountMediator() {
             case $T.notificationExt.GET_QUESTION_ANSWER_SUCCESS:
                 this.getQuestionAnswerSuccess(data[0].body);
                 break;
+            case $T.notificationExt.GET_QUESTION_TOP_ANSWER_SUCCESS:
+                this.getQuestionTopAnswerSuccess(data[0].body);
+                break;
         }
     }
+    this.getQuestionTopAnswerSuccess = function (data) {
+        if (data.questionType != this.nowSelect) {
+            return;
+        }
+        $("#questionTop").empty();
+        if (data.questionList != undefined) {
+            var html = document.createElement("div");
+            var htmlBody = '<table class="pure-table pure-table-bordered">' +
+                '<thead>' +
+                '<tr>' +
+                '<th>排名</th>' +
+                '<th>第几题</th>' +
+                '<th>答案</th>' +
+                '<th>数量</th>' +
+                '<th>相关人员</th>' +
+                '</tr>' +
+                '</thead>' +
+                '<tbody>';
+            for (var i = 0; i < data.questionList.length; i++) {
+                var question = data.questionList[i];
+                htmlBody += '<tr>' +
+                    '<td>' + (i + 1) + '</td>' +
+                    '<td>' + question.questionNum + '</td>' +
+                    '<td>' + this.mapQuestion[this.nowSelect][question.questionNum][question.answer] + '</td>' +
+                    '<td>' + question.answerNum + '</td><td>';
+                if (question.inputList != null) {
+                    for (var j = 0; j < question.inputList.length; j++) {
+                        var input = question.inputList[j];
+                        htmlBody += input.input1 + '（' + input.input2 + ')' + "，";
+                    }
+                }
+
+                htmlBody += '</td></tr>';
+            }
+            htmlBody += '</tbody>';
+            htmlBody += '</table>';
+            html.innerHTML = htmlBody;
+            html = $(html);
+        }
+        $("#questionTop").append(html);
+    }
+
     this.getQuestionAnswerSuccess = function (data) {
         if (data.questionType != this.nowSelect || data.questionNum != this.nowSelectNum) {
             return;

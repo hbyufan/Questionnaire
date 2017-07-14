@@ -67,5 +67,26 @@ function QuestionProxy() {
     this.getQuestionAnswerFail = function (result, sendParam) {
 
     }
+    this.getQuestionTopAnswer = function (questionType) {
+        var data = {
+            "hOpCode": 4,
+            "questionType": questionType,
+            "num": 10
+        };
+
+        var sendParam = new SendParam();
+        sendParam.successHandle = this.getQuestionTopAnswerSuccess;
+        sendParam.failHandle = this.getQuestionTopAnswerFail;
+        sendParam.object = this;
+        sendParam.data = data;
+        sendParam.url = $T.url.url;
+        $T.httpUtil.send(sendParam);
+    }
+    this.getQuestionTopAnswerSuccess = function (result, sendParam) {
+        $T.viewManager.notifyObservers($T.viewManager.getNotification($T.notificationExt.GET_QUESTION_TOP_ANSWER_SUCCESS, result));
+    }
+    this.getQuestionTopAnswerFail = function (result, sendParam) {
+
+    }
 }
 $T.questionProxy = new QuestionProxy();
