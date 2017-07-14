@@ -47,5 +47,6 @@
 
     <mappers>
         <mapper resource="dao/mappers/base/QuestionNaireMapper.xml" />
+        <mapper resource="dao/mappers/ext/QuestionNaireMapperExt.xml" />
 	</mappers>
 </configuration> 
