@@ -31,3 +31,23 @@ message GetQuestionAnswerS{
 	repeated int32 answerNum=5;
 	repeated string otherAnswer=6;
 }
+message GetQuestionTopAnswerC{
+	int32 hOpCode=1;
+	string questionType=2;//问题类型
+	int32 num=3;//要多少个
+}
+message GetQuestionTopAnswerS{
+	int32 hOpCode=1;
+	string questionType=2;//问题类型
+	repeated QuestionAnswerData questionList=3;//问题数据
+}
+message QuestionAnswerData{
+	int32 questionNum=1;
+	string answer=2;
+	int32 answerNum=3;
+	repeated QuestionInput inputList=4;
+}
+message QuestionInput{
+	string input1=1;
+	string input2=2;
+}

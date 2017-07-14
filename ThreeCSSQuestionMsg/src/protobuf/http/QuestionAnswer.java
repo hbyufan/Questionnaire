@@ -4635,6 +4635,3418 @@ public final class QuestionAnswer {
 
   }
 
+  public interface GetQuestionTopAnswerCOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:protobuf.http.GetQuestionTopAnswerC)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional int32 hOpCode = 1;</code>
+     */
+    int getHOpCode();
+
+    /**
+     * <pre>
+     *问题类型
+     * </pre>
+     *
+     * <code>optional string questionType = 2;</code>
+     */
+    java.lang.String getQuestionType();
+    /**
+     * <pre>
+     *问题类型
+     * </pre>
+     *
+     * <code>optional string questionType = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getQuestionTypeBytes();
+
+    /**
+     * <pre>
+     *要多少个
+     * </pre>
+     *
+     * <code>optional int32 num = 3;</code>
+     */
+    int getNum();
+  }
+  /**
+   * Protobuf type {@code protobuf.http.GetQuestionTopAnswerC}
+   */
+  public  static final class GetQuestionTopAnswerC extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:protobuf.http.GetQuestionTopAnswerC)
+      GetQuestionTopAnswerCOrBuilder {
+    // Use GetQuestionTopAnswerC.newBuilder() to construct.
+    private GetQuestionTopAnswerC(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetQuestionTopAnswerC() {
+      hOpCode_ = 0;
+      questionType_ = "";
+      num_ = 0;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private GetQuestionTopAnswerC(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+
+              hOpCode_ = input.readInt32();
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              questionType_ = s;
+              break;
+            }
+            case 24: {
+
+              num_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return protobuf.http.QuestionAnswer.internal_static_protobuf_http_GetQuestionTopAnswerC_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return protobuf.http.QuestionAnswer.internal_static_protobuf_http_GetQuestionTopAnswerC_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              protobuf.http.QuestionAnswer.GetQuestionTopAnswerC.class, protobuf.http.QuestionAnswer.GetQuestionTopAnswerC.Builder.class);
+    }
+
+    public static final int HOPCODE_FIELD_NUMBER = 1;
+    private int hOpCode_;
+    /**
+     * <code>optional int32 hOpCode = 1;</code>
+     */
+    public int getHOpCode() {
+      return hOpCode_;
+    }
+
+    public static final int QUESTIONTYPE_FIELD_NUMBER = 2;
+    private volatile java.lang.Object questionType_;
+    /**
+     * <pre>
+     *问题类型
+     * </pre>
+     *
+     * <code>optional string questionType = 2;</code>
+     */
+    public java.lang.String getQuestionType() {
+      java.lang.Object ref = questionType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        questionType_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     *问题类型
+     * </pre>
+     *
+     * <code>optional string questionType = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getQuestionTypeBytes() {
+      java.lang.Object ref = questionType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        questionType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NUM_FIELD_NUMBER = 3;
+    private int num_;
+    /**
+     * <pre>
+     *要多少个
+     * </pre>
+     *
+     * <code>optional int32 num = 3;</code>
+     */
+    public int getNum() {
+      return num_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (hOpCode_ != 0) {
+        output.writeInt32(1, hOpCode_);
+      }
+      if (!getQuestionTypeBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, questionType_);
+      }
+      if (num_ != 0) {
+        output.writeInt32(3, num_);
+      }
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (hOpCode_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, hOpCode_);
+      }
+      if (!getQuestionTypeBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, questionType_);
+      }
+      if (num_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, num_);
+      }
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof protobuf.http.QuestionAnswer.GetQuestionTopAnswerC)) {
+        return super.equals(obj);
+      }
+      protobuf.http.QuestionAnswer.GetQuestionTopAnswerC other = (protobuf.http.QuestionAnswer.GetQuestionTopAnswerC) obj;
+
+      boolean result = true;
+      result = result && (getHOpCode()
+          == other.getHOpCode());
+      result = result && getQuestionType()
+          .equals(other.getQuestionType());
+      result = result && (getNum()
+          == other.getNum());
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (37 * hash) + HOPCODE_FIELD_NUMBER;
+      hash = (53 * hash) + getHOpCode();
+      hash = (37 * hash) + QUESTIONTYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getQuestionType().hashCode();
+      hash = (37 * hash) + NUM_FIELD_NUMBER;
+      hash = (53 * hash) + getNum();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static protobuf.http.QuestionAnswer.GetQuestionTopAnswerC parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static protobuf.http.QuestionAnswer.GetQuestionTopAnswerC parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static protobuf.http.QuestionAnswer.GetQuestionTopAnswerC parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static protobuf.http.QuestionAnswer.GetQuestionTopAnswerC parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static protobuf.http.QuestionAnswer.GetQuestionTopAnswerC parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static protobuf.http.QuestionAnswer.GetQuestionTopAnswerC parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static protobuf.http.QuestionAnswer.GetQuestionTopAnswerC parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static protobuf.http.QuestionAnswer.GetQuestionTopAnswerC parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static protobuf.http.QuestionAnswer.GetQuestionTopAnswerC parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static protobuf.http.QuestionAnswer.GetQuestionTopAnswerC parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(protobuf.http.QuestionAnswer.GetQuestionTopAnswerC prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code protobuf.http.GetQuestionTopAnswerC}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:protobuf.http.GetQuestionTopAnswerC)
+        protobuf.http.QuestionAnswer.GetQuestionTopAnswerCOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return protobuf.http.QuestionAnswer.internal_static_protobuf_http_GetQuestionTopAnswerC_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return protobuf.http.QuestionAnswer.internal_static_protobuf_http_GetQuestionTopAnswerC_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                protobuf.http.QuestionAnswer.GetQuestionTopAnswerC.class, protobuf.http.QuestionAnswer.GetQuestionTopAnswerC.Builder.class);
+      }
+
+      // Construct using protobuf.http.QuestionAnswer.GetQuestionTopAnswerC.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        hOpCode_ = 0;
+
+        questionType_ = "";
+
+        num_ = 0;
+
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return protobuf.http.QuestionAnswer.internal_static_protobuf_http_GetQuestionTopAnswerC_descriptor;
+      }
+
+      public protobuf.http.QuestionAnswer.GetQuestionTopAnswerC getDefaultInstanceForType() {
+        return protobuf.http.QuestionAnswer.GetQuestionTopAnswerC.getDefaultInstance();
+      }
+
+      public protobuf.http.QuestionAnswer.GetQuestionTopAnswerC build() {
+        protobuf.http.QuestionAnswer.GetQuestionTopAnswerC result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public protobuf.http.QuestionAnswer.GetQuestionTopAnswerC buildPartial() {
+        protobuf.http.QuestionAnswer.GetQuestionTopAnswerC result = new protobuf.http.QuestionAnswer.GetQuestionTopAnswerC(this);
+        result.hOpCode_ = hOpCode_;
+        result.questionType_ = questionType_;
+        result.num_ = num_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof protobuf.http.QuestionAnswer.GetQuestionTopAnswerC) {
+          return mergeFrom((protobuf.http.QuestionAnswer.GetQuestionTopAnswerC)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(protobuf.http.QuestionAnswer.GetQuestionTopAnswerC other) {
+        if (other == protobuf.http.QuestionAnswer.GetQuestionTopAnswerC.getDefaultInstance()) return this;
+        if (other.getHOpCode() != 0) {
+          setHOpCode(other.getHOpCode());
+        }
+        if (!other.getQuestionType().isEmpty()) {
+          questionType_ = other.questionType_;
+          onChanged();
+        }
+        if (other.getNum() != 0) {
+          setNum(other.getNum());
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        protobuf.http.QuestionAnswer.GetQuestionTopAnswerC parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (protobuf.http.QuestionAnswer.GetQuestionTopAnswerC) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int hOpCode_ ;
+      /**
+       * <code>optional int32 hOpCode = 1;</code>
+       */
+      public int getHOpCode() {
+        return hOpCode_;
+      }
+      /**
+       * <code>optional int32 hOpCode = 1;</code>
+       */
+      public Builder setHOpCode(int value) {
+        
+        hOpCode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 hOpCode = 1;</code>
+       */
+      public Builder clearHOpCode() {
+        
+        hOpCode_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object questionType_ = "";
+      /**
+       * <pre>
+       *问题类型
+       * </pre>
+       *
+       * <code>optional string questionType = 2;</code>
+       */
+      public java.lang.String getQuestionType() {
+        java.lang.Object ref = questionType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          questionType_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       *问题类型
+       * </pre>
+       *
+       * <code>optional string questionType = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getQuestionTypeBytes() {
+        java.lang.Object ref = questionType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          questionType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       *问题类型
+       * </pre>
+       *
+       * <code>optional string questionType = 2;</code>
+       */
+      public Builder setQuestionType(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        questionType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *问题类型
+       * </pre>
+       *
+       * <code>optional string questionType = 2;</code>
+       */
+      public Builder clearQuestionType() {
+        
+        questionType_ = getDefaultInstance().getQuestionType();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *问题类型
+       * </pre>
+       *
+       * <code>optional string questionType = 2;</code>
+       */
+      public Builder setQuestionTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        questionType_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int num_ ;
+      /**
+       * <pre>
+       *要多少个
+       * </pre>
+       *
+       * <code>optional int32 num = 3;</code>
+       */
+      public int getNum() {
+        return num_;
+      }
+      /**
+       * <pre>
+       *要多少个
+       * </pre>
+       *
+       * <code>optional int32 num = 3;</code>
+       */
+      public Builder setNum(int value) {
+        
+        num_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *要多少个
+       * </pre>
+       *
+       * <code>optional int32 num = 3;</code>
+       */
+      public Builder clearNum() {
+        
+        num_ = 0;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:protobuf.http.GetQuestionTopAnswerC)
+    }
+
+    // @@protoc_insertion_point(class_scope:protobuf.http.GetQuestionTopAnswerC)
+    private static final protobuf.http.QuestionAnswer.GetQuestionTopAnswerC DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new protobuf.http.QuestionAnswer.GetQuestionTopAnswerC();
+    }
+
+    public static protobuf.http.QuestionAnswer.GetQuestionTopAnswerC getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetQuestionTopAnswerC>
+        PARSER = new com.google.protobuf.AbstractParser<GetQuestionTopAnswerC>() {
+      public GetQuestionTopAnswerC parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new GetQuestionTopAnswerC(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetQuestionTopAnswerC> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetQuestionTopAnswerC> getParserForType() {
+      return PARSER;
+    }
+
+    public protobuf.http.QuestionAnswer.GetQuestionTopAnswerC getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GetQuestionTopAnswerSOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:protobuf.http.GetQuestionTopAnswerS)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional int32 hOpCode = 1;</code>
+     */
+    int getHOpCode();
+
+    /**
+     * <pre>
+     *问题类型
+     * </pre>
+     *
+     * <code>optional string questionType = 2;</code>
+     */
+    java.lang.String getQuestionType();
+    /**
+     * <pre>
+     *问题类型
+     * </pre>
+     *
+     * <code>optional string questionType = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getQuestionTypeBytes();
+
+    /**
+     * <pre>
+     *问题数据
+     * </pre>
+     *
+     * <code>repeated .protobuf.http.QuestionAnswerData questionList = 3;</code>
+     */
+    java.util.List<protobuf.http.QuestionAnswer.QuestionAnswerData> 
+        getQuestionListList();
+    /**
+     * <pre>
+     *问题数据
+     * </pre>
+     *
+     * <code>repeated .protobuf.http.QuestionAnswerData questionList = 3;</code>
+     */
+    protobuf.http.QuestionAnswer.QuestionAnswerData getQuestionList(int index);
+    /**
+     * <pre>
+     *问题数据
+     * </pre>
+     *
+     * <code>repeated .protobuf.http.QuestionAnswerData questionList = 3;</code>
+     */
+    int getQuestionListCount();
+    /**
+     * <pre>
+     *问题数据
+     * </pre>
+     *
+     * <code>repeated .protobuf.http.QuestionAnswerData questionList = 3;</code>
+     */
+    java.util.List<? extends protobuf.http.QuestionAnswer.QuestionAnswerDataOrBuilder> 
+        getQuestionListOrBuilderList();
+    /**
+     * <pre>
+     *问题数据
+     * </pre>
+     *
+     * <code>repeated .protobuf.http.QuestionAnswerData questionList = 3;</code>
+     */
+    protobuf.http.QuestionAnswer.QuestionAnswerDataOrBuilder getQuestionListOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code protobuf.http.GetQuestionTopAnswerS}
+   */
+  public  static final class GetQuestionTopAnswerS extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:protobuf.http.GetQuestionTopAnswerS)
+      GetQuestionTopAnswerSOrBuilder {
+    // Use GetQuestionTopAnswerS.newBuilder() to construct.
+    private GetQuestionTopAnswerS(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetQuestionTopAnswerS() {
+      hOpCode_ = 0;
+      questionType_ = "";
+      questionList_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private GetQuestionTopAnswerS(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+
+              hOpCode_ = input.readInt32();
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              questionType_ = s;
+              break;
+            }
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                questionList_ = new java.util.ArrayList<protobuf.http.QuestionAnswer.QuestionAnswerData>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              questionList_.add(
+                  input.readMessage(protobuf.http.QuestionAnswer.QuestionAnswerData.parser(), extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+          questionList_ = java.util.Collections.unmodifiableList(questionList_);
+        }
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return protobuf.http.QuestionAnswer.internal_static_protobuf_http_GetQuestionTopAnswerS_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return protobuf.http.QuestionAnswer.internal_static_protobuf_http_GetQuestionTopAnswerS_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              protobuf.http.QuestionAnswer.GetQuestionTopAnswerS.class, protobuf.http.QuestionAnswer.GetQuestionTopAnswerS.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int HOPCODE_FIELD_NUMBER = 1;
+    private int hOpCode_;
+    /**
+     * <code>optional int32 hOpCode = 1;</code>
+     */
+    public int getHOpCode() {
+      return hOpCode_;
+    }
+
+    public static final int QUESTIONTYPE_FIELD_NUMBER = 2;
+    private volatile java.lang.Object questionType_;
+    /**
+     * <pre>
+     *问题类型
+     * </pre>
+     *
+     * <code>optional string questionType = 2;</code>
+     */
+    public java.lang.String getQuestionType() {
+      java.lang.Object ref = questionType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        questionType_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     *问题类型
+     * </pre>
+     *
+     * <code>optional string questionType = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getQuestionTypeBytes() {
+      java.lang.Object ref = questionType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        questionType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int QUESTIONLIST_FIELD_NUMBER = 3;
+    private java.util.List<protobuf.http.QuestionAnswer.QuestionAnswerData> questionList_;
+    /**
+     * <pre>
+     *问题数据
+     * </pre>
+     *
+     * <code>repeated .protobuf.http.QuestionAnswerData questionList = 3;</code>
+     */
+    public java.util.List<protobuf.http.QuestionAnswer.QuestionAnswerData> getQuestionListList() {
+      return questionList_;
+    }
+    /**
+     * <pre>
+     *问题数据
+     * </pre>
+     *
+     * <code>repeated .protobuf.http.QuestionAnswerData questionList = 3;</code>
+     */
+    public java.util.List<? extends protobuf.http.QuestionAnswer.QuestionAnswerDataOrBuilder> 
+        getQuestionListOrBuilderList() {
+      return questionList_;
+    }
+    /**
+     * <pre>
+     *问题数据
+     * </pre>
+     *
+     * <code>repeated .protobuf.http.QuestionAnswerData questionList = 3;</code>
+     */
+    public int getQuestionListCount() {
+      return questionList_.size();
+    }
+    /**
+     * <pre>
+     *问题数据
+     * </pre>
+     *
+     * <code>repeated .protobuf.http.QuestionAnswerData questionList = 3;</code>
+     */
+    public protobuf.http.QuestionAnswer.QuestionAnswerData getQuestionList(int index) {
+      return questionList_.get(index);
+    }
+    /**
+     * <pre>
+     *问题数据
+     * </pre>
+     *
+     * <code>repeated .protobuf.http.QuestionAnswerData questionList = 3;</code>
+     */
+    public protobuf.http.QuestionAnswer.QuestionAnswerDataOrBuilder getQuestionListOrBuilder(
+        int index) {
+      return questionList_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (hOpCode_ != 0) {
+        output.writeInt32(1, hOpCode_);
+      }
+      if (!getQuestionTypeBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, questionType_);
+      }
+      for (int i = 0; i < questionList_.size(); i++) {
+        output.writeMessage(3, questionList_.get(i));
+      }
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (hOpCode_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, hOpCode_);
+      }
+      if (!getQuestionTypeBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, questionType_);
+      }
+      for (int i = 0; i < questionList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, questionList_.get(i));
+      }
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof protobuf.http.QuestionAnswer.GetQuestionTopAnswerS)) {
+        return super.equals(obj);
+      }
+      protobuf.http.QuestionAnswer.GetQuestionTopAnswerS other = (protobuf.http.QuestionAnswer.GetQuestionTopAnswerS) obj;
+
+      boolean result = true;
+      result = result && (getHOpCode()
+          == other.getHOpCode());
+      result = result && getQuestionType()
+          .equals(other.getQuestionType());
+      result = result && getQuestionListList()
+          .equals(other.getQuestionListList());
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (37 * hash) + HOPCODE_FIELD_NUMBER;
+      hash = (53 * hash) + getHOpCode();
+      hash = (37 * hash) + QUESTIONTYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getQuestionType().hashCode();
+      if (getQuestionListCount() > 0) {
+        hash = (37 * hash) + QUESTIONLIST_FIELD_NUMBER;
+        hash = (53 * hash) + getQuestionListList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static protobuf.http.QuestionAnswer.GetQuestionTopAnswerS parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static protobuf.http.QuestionAnswer.GetQuestionTopAnswerS parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static protobuf.http.QuestionAnswer.GetQuestionTopAnswerS parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static protobuf.http.QuestionAnswer.GetQuestionTopAnswerS parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static protobuf.http.QuestionAnswer.GetQuestionTopAnswerS parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static protobuf.http.QuestionAnswer.GetQuestionTopAnswerS parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static protobuf.http.QuestionAnswer.GetQuestionTopAnswerS parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static protobuf.http.QuestionAnswer.GetQuestionTopAnswerS parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static protobuf.http.QuestionAnswer.GetQuestionTopAnswerS parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static protobuf.http.QuestionAnswer.GetQuestionTopAnswerS parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(protobuf.http.QuestionAnswer.GetQuestionTopAnswerS prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code protobuf.http.GetQuestionTopAnswerS}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:protobuf.http.GetQuestionTopAnswerS)
+        protobuf.http.QuestionAnswer.GetQuestionTopAnswerSOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return protobuf.http.QuestionAnswer.internal_static_protobuf_http_GetQuestionTopAnswerS_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return protobuf.http.QuestionAnswer.internal_static_protobuf_http_GetQuestionTopAnswerS_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                protobuf.http.QuestionAnswer.GetQuestionTopAnswerS.class, protobuf.http.QuestionAnswer.GetQuestionTopAnswerS.Builder.class);
+      }
+
+      // Construct using protobuf.http.QuestionAnswer.GetQuestionTopAnswerS.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getQuestionListFieldBuilder();
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        hOpCode_ = 0;
+
+        questionType_ = "";
+
+        if (questionListBuilder_ == null) {
+          questionList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        } else {
+          questionListBuilder_.clear();
+        }
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return protobuf.http.QuestionAnswer.internal_static_protobuf_http_GetQuestionTopAnswerS_descriptor;
+      }
+
+      public protobuf.http.QuestionAnswer.GetQuestionTopAnswerS getDefaultInstanceForType() {
+        return protobuf.http.QuestionAnswer.GetQuestionTopAnswerS.getDefaultInstance();
+      }
+
+      public protobuf.http.QuestionAnswer.GetQuestionTopAnswerS build() {
+        protobuf.http.QuestionAnswer.GetQuestionTopAnswerS result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public protobuf.http.QuestionAnswer.GetQuestionTopAnswerS buildPartial() {
+        protobuf.http.QuestionAnswer.GetQuestionTopAnswerS result = new protobuf.http.QuestionAnswer.GetQuestionTopAnswerS(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        result.hOpCode_ = hOpCode_;
+        result.questionType_ = questionType_;
+        if (questionListBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+            questionList_ = java.util.Collections.unmodifiableList(questionList_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.questionList_ = questionList_;
+        } else {
+          result.questionList_ = questionListBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof protobuf.http.QuestionAnswer.GetQuestionTopAnswerS) {
+          return mergeFrom((protobuf.http.QuestionAnswer.GetQuestionTopAnswerS)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(protobuf.http.QuestionAnswer.GetQuestionTopAnswerS other) {
+        if (other == protobuf.http.QuestionAnswer.GetQuestionTopAnswerS.getDefaultInstance()) return this;
+        if (other.getHOpCode() != 0) {
+          setHOpCode(other.getHOpCode());
+        }
+        if (!other.getQuestionType().isEmpty()) {
+          questionType_ = other.questionType_;
+          onChanged();
+        }
+        if (questionListBuilder_ == null) {
+          if (!other.questionList_.isEmpty()) {
+            if (questionList_.isEmpty()) {
+              questionList_ = other.questionList_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureQuestionListIsMutable();
+              questionList_.addAll(other.questionList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.questionList_.isEmpty()) {
+            if (questionListBuilder_.isEmpty()) {
+              questionListBuilder_.dispose();
+              questionListBuilder_ = null;
+              questionList_ = other.questionList_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              questionListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getQuestionListFieldBuilder() : null;
+            } else {
+              questionListBuilder_.addAllMessages(other.questionList_);
+            }
+          }
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        protobuf.http.QuestionAnswer.GetQuestionTopAnswerS parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (protobuf.http.QuestionAnswer.GetQuestionTopAnswerS) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int hOpCode_ ;
+      /**
+       * <code>optional int32 hOpCode = 1;</code>
+       */
+      public int getHOpCode() {
+        return hOpCode_;
+      }
+      /**
+       * <code>optional int32 hOpCode = 1;</code>
+       */
+      public Builder setHOpCode(int value) {
+        
+        hOpCode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 hOpCode = 1;</code>
+       */
+      public Builder clearHOpCode() {
+        
+        hOpCode_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object questionType_ = "";
+      /**
+       * <pre>
+       *问题类型
+       * </pre>
+       *
+       * <code>optional string questionType = 2;</code>
+       */
+      public java.lang.String getQuestionType() {
+        java.lang.Object ref = questionType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          questionType_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       *问题类型
+       * </pre>
+       *
+       * <code>optional string questionType = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getQuestionTypeBytes() {
+        java.lang.Object ref = questionType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          questionType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       *问题类型
+       * </pre>
+       *
+       * <code>optional string questionType = 2;</code>
+       */
+      public Builder setQuestionType(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        questionType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *问题类型
+       * </pre>
+       *
+       * <code>optional string questionType = 2;</code>
+       */
+      public Builder clearQuestionType() {
+        
+        questionType_ = getDefaultInstance().getQuestionType();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *问题类型
+       * </pre>
+       *
+       * <code>optional string questionType = 2;</code>
+       */
+      public Builder setQuestionTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        questionType_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<protobuf.http.QuestionAnswer.QuestionAnswerData> questionList_ =
+        java.util.Collections.emptyList();
+      private void ensureQuestionListIsMutable() {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+          questionList_ = new java.util.ArrayList<protobuf.http.QuestionAnswer.QuestionAnswerData>(questionList_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          protobuf.http.QuestionAnswer.QuestionAnswerData, protobuf.http.QuestionAnswer.QuestionAnswerData.Builder, protobuf.http.QuestionAnswer.QuestionAnswerDataOrBuilder> questionListBuilder_;
+
+      /**
+       * <pre>
+       *问题数据
+       * </pre>
+       *
+       * <code>repeated .protobuf.http.QuestionAnswerData questionList = 3;</code>
+       */
+      public java.util.List<protobuf.http.QuestionAnswer.QuestionAnswerData> getQuestionListList() {
+        if (questionListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(questionList_);
+        } else {
+          return questionListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       *问题数据
+       * </pre>
+       *
+       * <code>repeated .protobuf.http.QuestionAnswerData questionList = 3;</code>
+       */
+      public int getQuestionListCount() {
+        if (questionListBuilder_ == null) {
+          return questionList_.size();
+        } else {
+          return questionListBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       *问题数据
+       * </pre>
+       *
+       * <code>repeated .protobuf.http.QuestionAnswerData questionList = 3;</code>
+       */
+      public protobuf.http.QuestionAnswer.QuestionAnswerData getQuestionList(int index) {
+        if (questionListBuilder_ == null) {
+          return questionList_.get(index);
+        } else {
+          return questionListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       *问题数据
+       * </pre>
+       *
+       * <code>repeated .protobuf.http.QuestionAnswerData questionList = 3;</code>
+       */
+      public Builder setQuestionList(
+          int index, protobuf.http.QuestionAnswer.QuestionAnswerData value) {
+        if (questionListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureQuestionListIsMutable();
+          questionList_.set(index, value);
+          onChanged();
+        } else {
+          questionListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       *问题数据
+       * </pre>
+       *
+       * <code>repeated .protobuf.http.QuestionAnswerData questionList = 3;</code>
+       */
+      public Builder setQuestionList(
+          int index, protobuf.http.QuestionAnswer.QuestionAnswerData.Builder builderForValue) {
+        if (questionListBuilder_ == null) {
+          ensureQuestionListIsMutable();
+          questionList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          questionListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       *问题数据
+       * </pre>
+       *
+       * <code>repeated .protobuf.http.QuestionAnswerData questionList = 3;</code>
+       */
+      public Builder addQuestionList(protobuf.http.QuestionAnswer.QuestionAnswerData value) {
+        if (questionListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureQuestionListIsMutable();
+          questionList_.add(value);
+          onChanged();
+        } else {
+          questionListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       *问题数据
+       * </pre>
+       *
+       * <code>repeated .protobuf.http.QuestionAnswerData questionList = 3;</code>
+       */
+      public Builder addQuestionList(
+          int index, protobuf.http.QuestionAnswer.QuestionAnswerData value) {
+        if (questionListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureQuestionListIsMutable();
+          questionList_.add(index, value);
+          onChanged();
+        } else {
+          questionListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       *问题数据
+       * </pre>
+       *
+       * <code>repeated .protobuf.http.QuestionAnswerData questionList = 3;</code>
+       */
+      public Builder addQuestionList(
+          protobuf.http.QuestionAnswer.QuestionAnswerData.Builder builderForValue) {
+        if (questionListBuilder_ == null) {
+          ensureQuestionListIsMutable();
+          questionList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          questionListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       *问题数据
+       * </pre>
+       *
+       * <code>repeated .protobuf.http.QuestionAnswerData questionList = 3;</code>
+       */
+      public Builder addQuestionList(
+          int index, protobuf.http.QuestionAnswer.QuestionAnswerData.Builder builderForValue) {
+        if (questionListBuilder_ == null) {
+          ensureQuestionListIsMutable();
+          questionList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          questionListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       *问题数据
+       * </pre>
+       *
+       * <code>repeated .protobuf.http.QuestionAnswerData questionList = 3;</code>
+       */
+      public Builder addAllQuestionList(
+          java.lang.Iterable<? extends protobuf.http.QuestionAnswer.QuestionAnswerData> values) {
+        if (questionListBuilder_ == null) {
+          ensureQuestionListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, questionList_);
+          onChanged();
+        } else {
+          questionListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       *问题数据
+       * </pre>
+       *
+       * <code>repeated .protobuf.http.QuestionAnswerData questionList = 3;</code>
+       */
+      public Builder clearQuestionList() {
+        if (questionListBuilder_ == null) {
+          questionList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          questionListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       *问题数据
+       * </pre>
+       *
+       * <code>repeated .protobuf.http.QuestionAnswerData questionList = 3;</code>
+       */
+      public Builder removeQuestionList(int index) {
+        if (questionListBuilder_ == null) {
+          ensureQuestionListIsMutable();
+          questionList_.remove(index);
+          onChanged();
+        } else {
+          questionListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       *问题数据
+       * </pre>
+       *
+       * <code>repeated .protobuf.http.QuestionAnswerData questionList = 3;</code>
+       */
+      public protobuf.http.QuestionAnswer.QuestionAnswerData.Builder getQuestionListBuilder(
+          int index) {
+        return getQuestionListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       *问题数据
+       * </pre>
+       *
+       * <code>repeated .protobuf.http.QuestionAnswerData questionList = 3;</code>
+       */
+      public protobuf.http.QuestionAnswer.QuestionAnswerDataOrBuilder getQuestionListOrBuilder(
+          int index) {
+        if (questionListBuilder_ == null) {
+          return questionList_.get(index);  } else {
+          return questionListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       *问题数据
+       * </pre>
+       *
+       * <code>repeated .protobuf.http.QuestionAnswerData questionList = 3;</code>
+       */
+      public java.util.List<? extends protobuf.http.QuestionAnswer.QuestionAnswerDataOrBuilder> 
+           getQuestionListOrBuilderList() {
+        if (questionListBuilder_ != null) {
+          return questionListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(questionList_);
+        }
+      }
+      /**
+       * <pre>
+       *问题数据
+       * </pre>
+       *
+       * <code>repeated .protobuf.http.QuestionAnswerData questionList = 3;</code>
+       */
+      public protobuf.http.QuestionAnswer.QuestionAnswerData.Builder addQuestionListBuilder() {
+        return getQuestionListFieldBuilder().addBuilder(
+            protobuf.http.QuestionAnswer.QuestionAnswerData.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       *问题数据
+       * </pre>
+       *
+       * <code>repeated .protobuf.http.QuestionAnswerData questionList = 3;</code>
+       */
+      public protobuf.http.QuestionAnswer.QuestionAnswerData.Builder addQuestionListBuilder(
+          int index) {
+        return getQuestionListFieldBuilder().addBuilder(
+            index, protobuf.http.QuestionAnswer.QuestionAnswerData.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       *问题数据
+       * </pre>
+       *
+       * <code>repeated .protobuf.http.QuestionAnswerData questionList = 3;</code>
+       */
+      public java.util.List<protobuf.http.QuestionAnswer.QuestionAnswerData.Builder> 
+           getQuestionListBuilderList() {
+        return getQuestionListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          protobuf.http.QuestionAnswer.QuestionAnswerData, protobuf.http.QuestionAnswer.QuestionAnswerData.Builder, protobuf.http.QuestionAnswer.QuestionAnswerDataOrBuilder> 
+          getQuestionListFieldBuilder() {
+        if (questionListBuilder_ == null) {
+          questionListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              protobuf.http.QuestionAnswer.QuestionAnswerData, protobuf.http.QuestionAnswer.QuestionAnswerData.Builder, protobuf.http.QuestionAnswer.QuestionAnswerDataOrBuilder>(
+                  questionList_,
+                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  getParentForChildren(),
+                  isClean());
+          questionList_ = null;
+        }
+        return questionListBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:protobuf.http.GetQuestionTopAnswerS)
+    }
+
+    // @@protoc_insertion_point(class_scope:protobuf.http.GetQuestionTopAnswerS)
+    private static final protobuf.http.QuestionAnswer.GetQuestionTopAnswerS DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new protobuf.http.QuestionAnswer.GetQuestionTopAnswerS();
+    }
+
+    public static protobuf.http.QuestionAnswer.GetQuestionTopAnswerS getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetQuestionTopAnswerS>
+        PARSER = new com.google.protobuf.AbstractParser<GetQuestionTopAnswerS>() {
+      public GetQuestionTopAnswerS parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new GetQuestionTopAnswerS(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetQuestionTopAnswerS> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetQuestionTopAnswerS> getParserForType() {
+      return PARSER;
+    }
+
+    public protobuf.http.QuestionAnswer.GetQuestionTopAnswerS getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QuestionAnswerDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:protobuf.http.QuestionAnswerData)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional int32 questionNum = 1;</code>
+     */
+    int getQuestionNum();
+
+    /**
+     * <code>optional string answer = 2;</code>
+     */
+    java.lang.String getAnswer();
+    /**
+     * <code>optional string answer = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getAnswerBytes();
+
+    /**
+     * <code>optional int32 answerNum = 3;</code>
+     */
+    int getAnswerNum();
+
+    /**
+     * <code>repeated .protobuf.http.QuestionInput inputList = 4;</code>
+     */
+    java.util.List<protobuf.http.QuestionAnswer.QuestionInput> 
+        getInputListList();
+    /**
+     * <code>repeated .protobuf.http.QuestionInput inputList = 4;</code>
+     */
+    protobuf.http.QuestionAnswer.QuestionInput getInputList(int index);
+    /**
+     * <code>repeated .protobuf.http.QuestionInput inputList = 4;</code>
+     */
+    int getInputListCount();
+    /**
+     * <code>repeated .protobuf.http.QuestionInput inputList = 4;</code>
+     */
+    java.util.List<? extends protobuf.http.QuestionAnswer.QuestionInputOrBuilder> 
+        getInputListOrBuilderList();
+    /**
+     * <code>repeated .protobuf.http.QuestionInput inputList = 4;</code>
+     */
+    protobuf.http.QuestionAnswer.QuestionInputOrBuilder getInputListOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code protobuf.http.QuestionAnswerData}
+   */
+  public  static final class QuestionAnswerData extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:protobuf.http.QuestionAnswerData)
+      QuestionAnswerDataOrBuilder {
+    // Use QuestionAnswerData.newBuilder() to construct.
+    private QuestionAnswerData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QuestionAnswerData() {
+      questionNum_ = 0;
+      answer_ = "";
+      answerNum_ = 0;
+      inputList_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private QuestionAnswerData(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+
+              questionNum_ = input.readInt32();
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              answer_ = s;
+              break;
+            }
+            case 24: {
+
+              answerNum_ = input.readInt32();
+              break;
+            }
+            case 34: {
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+                inputList_ = new java.util.ArrayList<protobuf.http.QuestionAnswer.QuestionInput>();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              inputList_.add(
+                  input.readMessage(protobuf.http.QuestionAnswer.QuestionInput.parser(), extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+          inputList_ = java.util.Collections.unmodifiableList(inputList_);
+        }
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return protobuf.http.QuestionAnswer.internal_static_protobuf_http_QuestionAnswerData_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return protobuf.http.QuestionAnswer.internal_static_protobuf_http_QuestionAnswerData_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              protobuf.http.QuestionAnswer.QuestionAnswerData.class, protobuf.http.QuestionAnswer.QuestionAnswerData.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int QUESTIONNUM_FIELD_NUMBER = 1;
+    private int questionNum_;
+    /**
+     * <code>optional int32 questionNum = 1;</code>
+     */
+    public int getQuestionNum() {
+      return questionNum_;
+    }
+
+    public static final int ANSWER_FIELD_NUMBER = 2;
+    private volatile java.lang.Object answer_;
+    /**
+     * <code>optional string answer = 2;</code>
+     */
+    public java.lang.String getAnswer() {
+      java.lang.Object ref = answer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        answer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string answer = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getAnswerBytes() {
+      java.lang.Object ref = answer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        answer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ANSWERNUM_FIELD_NUMBER = 3;
+    private int answerNum_;
+    /**
+     * <code>optional int32 answerNum = 3;</code>
+     */
+    public int getAnswerNum() {
+      return answerNum_;
+    }
+
+    public static final int INPUTLIST_FIELD_NUMBER = 4;
+    private java.util.List<protobuf.http.QuestionAnswer.QuestionInput> inputList_;
+    /**
+     * <code>repeated .protobuf.http.QuestionInput inputList = 4;</code>
+     */
+    public java.util.List<protobuf.http.QuestionAnswer.QuestionInput> getInputListList() {
+      return inputList_;
+    }
+    /**
+     * <code>repeated .protobuf.http.QuestionInput inputList = 4;</code>
+     */
+    public java.util.List<? extends protobuf.http.QuestionAnswer.QuestionInputOrBuilder> 
+        getInputListOrBuilderList() {
+      return inputList_;
+    }
+    /**
+     * <code>repeated .protobuf.http.QuestionInput inputList = 4;</code>
+     */
+    public int getInputListCount() {
+      return inputList_.size();
+    }
+    /**
+     * <code>repeated .protobuf.http.QuestionInput inputList = 4;</code>
+     */
+    public protobuf.http.QuestionAnswer.QuestionInput getInputList(int index) {
+      return inputList_.get(index);
+    }
+    /**
+     * <code>repeated .protobuf.http.QuestionInput inputList = 4;</code>
+     */
+    public protobuf.http.QuestionAnswer.QuestionInputOrBuilder getInputListOrBuilder(
+        int index) {
+      return inputList_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (questionNum_ != 0) {
+        output.writeInt32(1, questionNum_);
+      }
+      if (!getAnswerBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, answer_);
+      }
+      if (answerNum_ != 0) {
+        output.writeInt32(3, answerNum_);
+      }
+      for (int i = 0; i < inputList_.size(); i++) {
+        output.writeMessage(4, inputList_.get(i));
+      }
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (questionNum_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, questionNum_);
+      }
+      if (!getAnswerBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, answer_);
+      }
+      if (answerNum_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, answerNum_);
+      }
+      for (int i = 0; i < inputList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, inputList_.get(i));
+      }
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof protobuf.http.QuestionAnswer.QuestionAnswerData)) {
+        return super.equals(obj);
+      }
+      protobuf.http.QuestionAnswer.QuestionAnswerData other = (protobuf.http.QuestionAnswer.QuestionAnswerData) obj;
+
+      boolean result = true;
+      result = result && (getQuestionNum()
+          == other.getQuestionNum());
+      result = result && getAnswer()
+          .equals(other.getAnswer());
+      result = result && (getAnswerNum()
+          == other.getAnswerNum());
+      result = result && getInputListList()
+          .equals(other.getInputListList());
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (37 * hash) + QUESTIONNUM_FIELD_NUMBER;
+      hash = (53 * hash) + getQuestionNum();
+      hash = (37 * hash) + ANSWER_FIELD_NUMBER;
+      hash = (53 * hash) + getAnswer().hashCode();
+      hash = (37 * hash) + ANSWERNUM_FIELD_NUMBER;
+      hash = (53 * hash) + getAnswerNum();
+      if (getInputListCount() > 0) {
+        hash = (37 * hash) + INPUTLIST_FIELD_NUMBER;
+        hash = (53 * hash) + getInputListList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static protobuf.http.QuestionAnswer.QuestionAnswerData parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static protobuf.http.QuestionAnswer.QuestionAnswerData parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static protobuf.http.QuestionAnswer.QuestionAnswerData parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static protobuf.http.QuestionAnswer.QuestionAnswerData parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static protobuf.http.QuestionAnswer.QuestionAnswerData parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static protobuf.http.QuestionAnswer.QuestionAnswerData parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static protobuf.http.QuestionAnswer.QuestionAnswerData parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static protobuf.http.QuestionAnswer.QuestionAnswerData parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static protobuf.http.QuestionAnswer.QuestionAnswerData parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static protobuf.http.QuestionAnswer.QuestionAnswerData parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(protobuf.http.QuestionAnswer.QuestionAnswerData prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code protobuf.http.QuestionAnswerData}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:protobuf.http.QuestionAnswerData)
+        protobuf.http.QuestionAnswer.QuestionAnswerDataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return protobuf.http.QuestionAnswer.internal_static_protobuf_http_QuestionAnswerData_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return protobuf.http.QuestionAnswer.internal_static_protobuf_http_QuestionAnswerData_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                protobuf.http.QuestionAnswer.QuestionAnswerData.class, protobuf.http.QuestionAnswer.QuestionAnswerData.Builder.class);
+      }
+
+      // Construct using protobuf.http.QuestionAnswer.QuestionAnswerData.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getInputListFieldBuilder();
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        questionNum_ = 0;
+
+        answer_ = "";
+
+        answerNum_ = 0;
+
+        if (inputListBuilder_ == null) {
+          inputList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        } else {
+          inputListBuilder_.clear();
+        }
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return protobuf.http.QuestionAnswer.internal_static_protobuf_http_QuestionAnswerData_descriptor;
+      }
+
+      public protobuf.http.QuestionAnswer.QuestionAnswerData getDefaultInstanceForType() {
+        return protobuf.http.QuestionAnswer.QuestionAnswerData.getDefaultInstance();
+      }
+
+      public protobuf.http.QuestionAnswer.QuestionAnswerData build() {
+        protobuf.http.QuestionAnswer.QuestionAnswerData result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public protobuf.http.QuestionAnswer.QuestionAnswerData buildPartial() {
+        protobuf.http.QuestionAnswer.QuestionAnswerData result = new protobuf.http.QuestionAnswer.QuestionAnswerData(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        result.questionNum_ = questionNum_;
+        result.answer_ = answer_;
+        result.answerNum_ = answerNum_;
+        if (inputListBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) == 0x00000008)) {
+            inputList_ = java.util.Collections.unmodifiableList(inputList_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.inputList_ = inputList_;
+        } else {
+          result.inputList_ = inputListBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof protobuf.http.QuestionAnswer.QuestionAnswerData) {
+          return mergeFrom((protobuf.http.QuestionAnswer.QuestionAnswerData)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(protobuf.http.QuestionAnswer.QuestionAnswerData other) {
+        if (other == protobuf.http.QuestionAnswer.QuestionAnswerData.getDefaultInstance()) return this;
+        if (other.getQuestionNum() != 0) {
+          setQuestionNum(other.getQuestionNum());
+        }
+        if (!other.getAnswer().isEmpty()) {
+          answer_ = other.answer_;
+          onChanged();
+        }
+        if (other.getAnswerNum() != 0) {
+          setAnswerNum(other.getAnswerNum());
+        }
+        if (inputListBuilder_ == null) {
+          if (!other.inputList_.isEmpty()) {
+            if (inputList_.isEmpty()) {
+              inputList_ = other.inputList_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureInputListIsMutable();
+              inputList_.addAll(other.inputList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.inputList_.isEmpty()) {
+            if (inputListBuilder_.isEmpty()) {
+              inputListBuilder_.dispose();
+              inputListBuilder_ = null;
+              inputList_ = other.inputList_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              inputListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getInputListFieldBuilder() : null;
+            } else {
+              inputListBuilder_.addAllMessages(other.inputList_);
+            }
+          }
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        protobuf.http.QuestionAnswer.QuestionAnswerData parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (protobuf.http.QuestionAnswer.QuestionAnswerData) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int questionNum_ ;
+      /**
+       * <code>optional int32 questionNum = 1;</code>
+       */
+      public int getQuestionNum() {
+        return questionNum_;
+      }
+      /**
+       * <code>optional int32 questionNum = 1;</code>
+       */
+      public Builder setQuestionNum(int value) {
+        
+        questionNum_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 questionNum = 1;</code>
+       */
+      public Builder clearQuestionNum() {
+        
+        questionNum_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object answer_ = "";
+      /**
+       * <code>optional string answer = 2;</code>
+       */
+      public java.lang.String getAnswer() {
+        java.lang.Object ref = answer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          answer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string answer = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getAnswerBytes() {
+        java.lang.Object ref = answer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          answer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string answer = 2;</code>
+       */
+      public Builder setAnswer(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        answer_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string answer = 2;</code>
+       */
+      public Builder clearAnswer() {
+        
+        answer_ = getDefaultInstance().getAnswer();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string answer = 2;</code>
+       */
+      public Builder setAnswerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        answer_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int answerNum_ ;
+      /**
+       * <code>optional int32 answerNum = 3;</code>
+       */
+      public int getAnswerNum() {
+        return answerNum_;
+      }
+      /**
+       * <code>optional int32 answerNum = 3;</code>
+       */
+      public Builder setAnswerNum(int value) {
+        
+        answerNum_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 answerNum = 3;</code>
+       */
+      public Builder clearAnswerNum() {
+        
+        answerNum_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<protobuf.http.QuestionAnswer.QuestionInput> inputList_ =
+        java.util.Collections.emptyList();
+      private void ensureInputListIsMutable() {
+        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+          inputList_ = new java.util.ArrayList<protobuf.http.QuestionAnswer.QuestionInput>(inputList_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          protobuf.http.QuestionAnswer.QuestionInput, protobuf.http.QuestionAnswer.QuestionInput.Builder, protobuf.http.QuestionAnswer.QuestionInputOrBuilder> inputListBuilder_;
+
+      /**
+       * <code>repeated .protobuf.http.QuestionInput inputList = 4;</code>
+       */
+      public java.util.List<protobuf.http.QuestionAnswer.QuestionInput> getInputListList() {
+        if (inputListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(inputList_);
+        } else {
+          return inputListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .protobuf.http.QuestionInput inputList = 4;</code>
+       */
+      public int getInputListCount() {
+        if (inputListBuilder_ == null) {
+          return inputList_.size();
+        } else {
+          return inputListBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .protobuf.http.QuestionInput inputList = 4;</code>
+       */
+      public protobuf.http.QuestionAnswer.QuestionInput getInputList(int index) {
+        if (inputListBuilder_ == null) {
+          return inputList_.get(index);
+        } else {
+          return inputListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .protobuf.http.QuestionInput inputList = 4;</code>
+       */
+      public Builder setInputList(
+          int index, protobuf.http.QuestionAnswer.QuestionInput value) {
+        if (inputListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInputListIsMutable();
+          inputList_.set(index, value);
+          onChanged();
+        } else {
+          inputListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .protobuf.http.QuestionInput inputList = 4;</code>
+       */
+      public Builder setInputList(
+          int index, protobuf.http.QuestionAnswer.QuestionInput.Builder builderForValue) {
+        if (inputListBuilder_ == null) {
+          ensureInputListIsMutable();
+          inputList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          inputListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .protobuf.http.QuestionInput inputList = 4;</code>
+       */
+      public Builder addInputList(protobuf.http.QuestionAnswer.QuestionInput value) {
+        if (inputListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInputListIsMutable();
+          inputList_.add(value);
+          onChanged();
+        } else {
+          inputListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .protobuf.http.QuestionInput inputList = 4;</code>
+       */
+      public Builder addInputList(
+          int index, protobuf.http.QuestionAnswer.QuestionInput value) {
+        if (inputListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInputListIsMutable();
+          inputList_.add(index, value);
+          onChanged();
+        } else {
+          inputListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .protobuf.http.QuestionInput inputList = 4;</code>
+       */
+      public Builder addInputList(
+          protobuf.http.QuestionAnswer.QuestionInput.Builder builderForValue) {
+        if (inputListBuilder_ == null) {
+          ensureInputListIsMutable();
+          inputList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          inputListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .protobuf.http.QuestionInput inputList = 4;</code>
+       */
+      public Builder addInputList(
+          int index, protobuf.http.QuestionAnswer.QuestionInput.Builder builderForValue) {
+        if (inputListBuilder_ == null) {
+          ensureInputListIsMutable();
+          inputList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          inputListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .protobuf.http.QuestionInput inputList = 4;</code>
+       */
+      public Builder addAllInputList(
+          java.lang.Iterable<? extends protobuf.http.QuestionAnswer.QuestionInput> values) {
+        if (inputListBuilder_ == null) {
+          ensureInputListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, inputList_);
+          onChanged();
+        } else {
+          inputListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .protobuf.http.QuestionInput inputList = 4;</code>
+       */
+      public Builder clearInputList() {
+        if (inputListBuilder_ == null) {
+          inputList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          inputListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .protobuf.http.QuestionInput inputList = 4;</code>
+       */
+      public Builder removeInputList(int index) {
+        if (inputListBuilder_ == null) {
+          ensureInputListIsMutable();
+          inputList_.remove(index);
+          onChanged();
+        } else {
+          inputListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .protobuf.http.QuestionInput inputList = 4;</code>
+       */
+      public protobuf.http.QuestionAnswer.QuestionInput.Builder getInputListBuilder(
+          int index) {
+        return getInputListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .protobuf.http.QuestionInput inputList = 4;</code>
+       */
+      public protobuf.http.QuestionAnswer.QuestionInputOrBuilder getInputListOrBuilder(
+          int index) {
+        if (inputListBuilder_ == null) {
+          return inputList_.get(index);  } else {
+          return inputListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .protobuf.http.QuestionInput inputList = 4;</code>
+       */
+      public java.util.List<? extends protobuf.http.QuestionAnswer.QuestionInputOrBuilder> 
+           getInputListOrBuilderList() {
+        if (inputListBuilder_ != null) {
+          return inputListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(inputList_);
+        }
+      }
+      /**
+       * <code>repeated .protobuf.http.QuestionInput inputList = 4;</code>
+       */
+      public protobuf.http.QuestionAnswer.QuestionInput.Builder addInputListBuilder() {
+        return getInputListFieldBuilder().addBuilder(
+            protobuf.http.QuestionAnswer.QuestionInput.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .protobuf.http.QuestionInput inputList = 4;</code>
+       */
+      public protobuf.http.QuestionAnswer.QuestionInput.Builder addInputListBuilder(
+          int index) {
+        return getInputListFieldBuilder().addBuilder(
+            index, protobuf.http.QuestionAnswer.QuestionInput.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .protobuf.http.QuestionInput inputList = 4;</code>
+       */
+      public java.util.List<protobuf.http.QuestionAnswer.QuestionInput.Builder> 
+           getInputListBuilderList() {
+        return getInputListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          protobuf.http.QuestionAnswer.QuestionInput, protobuf.http.QuestionAnswer.QuestionInput.Builder, protobuf.http.QuestionAnswer.QuestionInputOrBuilder> 
+          getInputListFieldBuilder() {
+        if (inputListBuilder_ == null) {
+          inputListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              protobuf.http.QuestionAnswer.QuestionInput, protobuf.http.QuestionAnswer.QuestionInput.Builder, protobuf.http.QuestionAnswer.QuestionInputOrBuilder>(
+                  inputList_,
+                  ((bitField0_ & 0x00000008) == 0x00000008),
+                  getParentForChildren(),
+                  isClean());
+          inputList_ = null;
+        }
+        return inputListBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:protobuf.http.QuestionAnswerData)
+    }
+
+    // @@protoc_insertion_point(class_scope:protobuf.http.QuestionAnswerData)
+    private static final protobuf.http.QuestionAnswer.QuestionAnswerData DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new protobuf.http.QuestionAnswer.QuestionAnswerData();
+    }
+
+    public static protobuf.http.QuestionAnswer.QuestionAnswerData getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QuestionAnswerData>
+        PARSER = new com.google.protobuf.AbstractParser<QuestionAnswerData>() {
+      public QuestionAnswerData parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new QuestionAnswerData(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<QuestionAnswerData> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QuestionAnswerData> getParserForType() {
+      return PARSER;
+    }
+
+    public protobuf.http.QuestionAnswer.QuestionAnswerData getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QuestionInputOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:protobuf.http.QuestionInput)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string input1 = 1;</code>
+     */
+    java.lang.String getInput1();
+    /**
+     * <code>optional string input1 = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getInput1Bytes();
+
+    /**
+     * <code>optional string input2 = 2;</code>
+     */
+    java.lang.String getInput2();
+    /**
+     * <code>optional string input2 = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getInput2Bytes();
+  }
+  /**
+   * Protobuf type {@code protobuf.http.QuestionInput}
+   */
+  public  static final class QuestionInput extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:protobuf.http.QuestionInput)
+      QuestionInputOrBuilder {
+    // Use QuestionInput.newBuilder() to construct.
+    private QuestionInput(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QuestionInput() {
+      input1_ = "";
+      input2_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private QuestionInput(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              input1_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              input2_ = s;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return protobuf.http.QuestionAnswer.internal_static_protobuf_http_QuestionInput_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return protobuf.http.QuestionAnswer.internal_static_protobuf_http_QuestionInput_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              protobuf.http.QuestionAnswer.QuestionInput.class, protobuf.http.QuestionAnswer.QuestionInput.Builder.class);
+    }
+
+    public static final int INPUT1_FIELD_NUMBER = 1;
+    private volatile java.lang.Object input1_;
+    /**
+     * <code>optional string input1 = 1;</code>
+     */
+    public java.lang.String getInput1() {
+      java.lang.Object ref = input1_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        input1_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string input1 = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getInput1Bytes() {
+      java.lang.Object ref = input1_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        input1_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int INPUT2_FIELD_NUMBER = 2;
+    private volatile java.lang.Object input2_;
+    /**
+     * <code>optional string input2 = 2;</code>
+     */
+    public java.lang.String getInput2() {
+      java.lang.Object ref = input2_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        input2_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string input2 = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getInput2Bytes() {
+      java.lang.Object ref = input2_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        input2_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getInput1Bytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, input1_);
+      }
+      if (!getInput2Bytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, input2_);
+      }
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getInput1Bytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, input1_);
+      }
+      if (!getInput2Bytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, input2_);
+      }
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof protobuf.http.QuestionAnswer.QuestionInput)) {
+        return super.equals(obj);
+      }
+      protobuf.http.QuestionAnswer.QuestionInput other = (protobuf.http.QuestionAnswer.QuestionInput) obj;
+
+      boolean result = true;
+      result = result && getInput1()
+          .equals(other.getInput1());
+      result = result && getInput2()
+          .equals(other.getInput2());
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (37 * hash) + INPUT1_FIELD_NUMBER;
+      hash = (53 * hash) + getInput1().hashCode();
+      hash = (37 * hash) + INPUT2_FIELD_NUMBER;
+      hash = (53 * hash) + getInput2().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static protobuf.http.QuestionAnswer.QuestionInput parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static protobuf.http.QuestionAnswer.QuestionInput parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static protobuf.http.QuestionAnswer.QuestionInput parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static protobuf.http.QuestionAnswer.QuestionInput parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static protobuf.http.QuestionAnswer.QuestionInput parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static protobuf.http.QuestionAnswer.QuestionInput parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static protobuf.http.QuestionAnswer.QuestionInput parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static protobuf.http.QuestionAnswer.QuestionInput parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static protobuf.http.QuestionAnswer.QuestionInput parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static protobuf.http.QuestionAnswer.QuestionInput parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(protobuf.http.QuestionAnswer.QuestionInput prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code protobuf.http.QuestionInput}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:protobuf.http.QuestionInput)
+        protobuf.http.QuestionAnswer.QuestionInputOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return protobuf.http.QuestionAnswer.internal_static_protobuf_http_QuestionInput_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return protobuf.http.QuestionAnswer.internal_static_protobuf_http_QuestionInput_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                protobuf.http.QuestionAnswer.QuestionInput.class, protobuf.http.QuestionAnswer.QuestionInput.Builder.class);
+      }
+
+      // Construct using protobuf.http.QuestionAnswer.QuestionInput.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        input1_ = "";
+
+        input2_ = "";
+
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return protobuf.http.QuestionAnswer.internal_static_protobuf_http_QuestionInput_descriptor;
+      }
+
+      public protobuf.http.QuestionAnswer.QuestionInput getDefaultInstanceForType() {
+        return protobuf.http.QuestionAnswer.QuestionInput.getDefaultInstance();
+      }
+
+      public protobuf.http.QuestionAnswer.QuestionInput build() {
+        protobuf.http.QuestionAnswer.QuestionInput result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public protobuf.http.QuestionAnswer.QuestionInput buildPartial() {
+        protobuf.http.QuestionAnswer.QuestionInput result = new protobuf.http.QuestionAnswer.QuestionInput(this);
+        result.input1_ = input1_;
+        result.input2_ = input2_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof protobuf.http.QuestionAnswer.QuestionInput) {
+          return mergeFrom((protobuf.http.QuestionAnswer.QuestionInput)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(protobuf.http.QuestionAnswer.QuestionInput other) {
+        if (other == protobuf.http.QuestionAnswer.QuestionInput.getDefaultInstance()) return this;
+        if (!other.getInput1().isEmpty()) {
+          input1_ = other.input1_;
+          onChanged();
+        }
+        if (!other.getInput2().isEmpty()) {
+          input2_ = other.input2_;
+          onChanged();
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        protobuf.http.QuestionAnswer.QuestionInput parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (protobuf.http.QuestionAnswer.QuestionInput) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object input1_ = "";
+      /**
+       * <code>optional string input1 = 1;</code>
+       */
+      public java.lang.String getInput1() {
+        java.lang.Object ref = input1_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          input1_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string input1 = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getInput1Bytes() {
+        java.lang.Object ref = input1_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          input1_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string input1 = 1;</code>
+       */
+      public Builder setInput1(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        input1_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string input1 = 1;</code>
+       */
+      public Builder clearInput1() {
+        
+        input1_ = getDefaultInstance().getInput1();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string input1 = 1;</code>
+       */
+      public Builder setInput1Bytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        input1_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object input2_ = "";
+      /**
+       * <code>optional string input2 = 2;</code>
+       */
+      public java.lang.String getInput2() {
+        java.lang.Object ref = input2_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          input2_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string input2 = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getInput2Bytes() {
+        java.lang.Object ref = input2_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          input2_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string input2 = 2;</code>
+       */
+      public Builder setInput2(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        input2_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string input2 = 2;</code>
+       */
+      public Builder clearInput2() {
+        
+        input2_ = getDefaultInstance().getInput2();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string input2 = 2;</code>
+       */
+      public Builder setInput2Bytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        input2_ = value;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:protobuf.http.QuestionInput)
+    }
+
+    // @@protoc_insertion_point(class_scope:protobuf.http.QuestionInput)
+    private static final protobuf.http.QuestionAnswer.QuestionInput DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new protobuf.http.QuestionAnswer.QuestionInput();
+    }
+
+    public static protobuf.http.QuestionAnswer.QuestionInput getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QuestionInput>
+        PARSER = new com.google.protobuf.AbstractParser<QuestionInput>() {
+      public QuestionInput parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new QuestionInput(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<QuestionInput> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QuestionInput> getParserForType() {
+      return PARSER;
+    }
+
+    public protobuf.http.QuestionAnswer.QuestionInput getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_protobuf_http_QuestionAnswerC_descriptor;
   private static final 
@@ -4665,6 +8077,26 @@ public final class QuestionAnswer {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_protobuf_http_GetQuestionAnswerS_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_protobuf_http_GetQuestionTopAnswerC_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_protobuf_http_GetQuestionTopAnswerC_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_protobuf_http_GetQuestionTopAnswerS_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_protobuf_http_GetQuestionTopAnswerS_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_protobuf_http_QuestionAnswerData_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_protobuf_http_QuestionAnswerData_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_protobuf_http_QuestionInput_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_protobuf_http_QuestionInput_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -4687,7 +8119,16 @@ public final class QuestionAnswer {
       "\001\n\022GetQuestionAnswerS\022\017\n\007hOpCode\030\001 \001(\005\022\024" +
       "\n\014questionType\030\002 \001(\t\022\023\n\013questionNum\030\003 \001(" +
       "\005\022\016\n\006answer\030\004 \003(\t\022\021\n\tanswerNum\030\005 \003(\005\022\023\n\013" +
-      "otherAnswer\030\006 \003(\tb\006proto3"
+      "otherAnswer\030\006 \003(\t\"K\n\025GetQuestionTopAnswe" +
+      "rC\022\017\n\007hOpCode\030\001 \001(\005\022\024\n\014questionType\030\002 \001(" +
+      "\t\022\013\n\003num\030\003 \001(\005\"w\n\025GetQuestionTopAnswerS\022" +
+      "\017\n\007hOpCode\030\001 \001(\005\022\024\n\014questionType\030\002 \001(\t\0227" +
+      "\n\014questionList\030\003 \003(\0132!.protobuf.http.Que" +
+      "stionAnswerData\"}\n\022QuestionAnswerData\022\023\n" +
+      "\013questionNum\030\001 \001(\005\022\016\n\006answer\030\002 \001(\t\022\021\n\tan",
+      "swerNum\030\003 \001(\005\022/\n\tinputList\030\004 \003(\0132\034.proto" +
+      "buf.http.QuestionInput\"/\n\rQuestionInput\022" +
+      "\016\n\006input1\030\001 \001(\t\022\016\n\006input2\030\002 \001(\tb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -4737,6 +8178,30 @@ public final class QuestionAnswer {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_protobuf_http_GetQuestionAnswerS_descriptor,
         new java.lang.String[] { "HOpCode", "QuestionType", "QuestionNum", "Answer", "AnswerNum", "OtherAnswer", });
+    internal_static_protobuf_http_GetQuestionTopAnswerC_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_protobuf_http_GetQuestionTopAnswerC_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_protobuf_http_GetQuestionTopAnswerC_descriptor,
+        new java.lang.String[] { "HOpCode", "QuestionType", "Num", });
+    internal_static_protobuf_http_GetQuestionTopAnswerS_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_protobuf_http_GetQuestionTopAnswerS_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_protobuf_http_GetQuestionTopAnswerS_descriptor,
+        new java.lang.String[] { "HOpCode", "QuestionType", "QuestionList", });
+    internal_static_protobuf_http_QuestionAnswerData_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_protobuf_http_QuestionAnswerData_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_protobuf_http_QuestionAnswerData_descriptor,
+        new java.lang.String[] { "QuestionNum", "Answer", "AnswerNum", "InputList", });
+    internal_static_protobuf_http_QuestionInput_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_protobuf_http_QuestionInput_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_protobuf_http_QuestionInput_descriptor,
+        new java.lang.String[] { "Input1", "Input2", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
