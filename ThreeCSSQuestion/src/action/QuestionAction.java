@@ -181,7 +181,7 @@ public class QuestionAction {
 		if (StringUtil.stringIsNull(questionId)) {
 			return null;
 		}
-		if (questionNum <= 0 || questionNum > 14) {
+		if (questionNum < 0 || questionNum > 14) {
 			return null;
 		}
 		SqlSession sqlSession = null;

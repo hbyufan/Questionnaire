@@ -1,5 +1,6 @@
 package service;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -13,10 +14,14 @@ import http.IHttpListener;
 import http.exception.HttpErrorException;
 import protobuf.http.QuestionAnswer.GetQuestionAnswerC;
 import protobuf.http.QuestionAnswer.GetQuestionAnswerS;
+import protobuf.http.QuestionAnswer.GetQuestionTopAnswerC;
+import protobuf.http.QuestionAnswer.GetQuestionTopAnswerS;
 import protobuf.http.QuestionAnswer.GetQuestionTypeC;
 import protobuf.http.QuestionAnswer.GetQuestionTypeS;
 import protobuf.http.QuestionAnswer.QuestionAnswerC;
+import protobuf.http.QuestionAnswer.QuestionAnswerData;
 import protobuf.http.QuestionAnswer.QuestionAnswerS;
+import protobuf.http.QuestionAnswer.QuestionInput;
 import tool.StringUtil;
 
 public class QuestionService implements IHttpListener {
@@ -27,6 +32,7 @@ public class QuestionService implements IHttpListener {
 		map.put(HOpCodeQuestionNaire.QUESTION_ANSWER, "questionAnswerHandle");
 		map.put(HOpCodeQuestionNaire.GET_QUESTION_TYPE, "getQuestionType");
 		map.put(HOpCodeQuestionNaire.GET_QUESTION_ANSWER, "getQuestionAnswer");
+		map.put(HOpCodeQuestionNaire.GET_QUESTION_TOP_ANSWER, "getQuestionTopAnswerHandle");
 		return map;
 	}
 
@@ -146,6 +152,118 @@ public class QuestionService implements IHttpListener {
 		}
 		builder.setQuestionType(message.getQuestionType());
 		builder.setQuestionNum(message.getQuestionNum());
+		HttpPacket packet = new HttpPacket(hSession.headParam.hOpCode, builder.build());
+		return packet;
+	}
+
+	public HttpPacket getQuestionTopAnswerHandle(HSession hSession) throws HttpErrorException {
+		GetQuestionTopAnswerC message = (GetQuestionTopAnswerC) hSession.httpPacket.getData();
+		List<QuestionNaire> list = QuestionAction.getQuestionAnswer(message.getQuestionType(), 0);
+		if (list == null) {
+			return null;
+		}
+		Map<String, QuestionData> map = new HashMap<>();
+		for (int i = 1; i <= 14; i++) {
+			for (int j = 0; j < list.size(); j++) {
+				QuestionNaire questionNaire = list.get(j);
+				String questionStr = null;
+				if (i == 1) {
+					questionStr = questionNaire.getQuestion1();
+				} else if (i == 2) {
+					questionStr = questionNaire.getQuestion2();
+				} else if (i == 3) {
+					questionStr = questionNaire.getQuestion3();
+				} else if (i == 4) {
+					questionStr = questionNaire.getQuestion4();
+				} else if (i == 5) {
+					questionStr = questionNaire.getQuestion5();
+				} else if (i == 6) {
+					questionStr = questionNaire.getQuestion6();
+				} else if (i == 7) {
+					questionStr = questionNaire.getQuestion7();
+				} else if (i == 8) {
+					questionStr = questionNaire.getQuestion8();
+				} else if (i == 9) {
+					questionStr = questionNaire.getQuestion9();
+				} else if (i == 10) {
+					questionStr = questionNaire.getQuestion10();
+				} else if (i == 11) {
+					questionStr = questionNaire.getQuestion11();
+				} else if (i == 12) {
+					questionStr = questionNaire.getQuestion12();
+				} else if (i == 13) {
+					questionStr = questionNaire.getQuestion13();
+				} else if (i == 14) {
+					questionStr = questionNaire.getQuestion14();
+				}
+
+				if (!StringUtil.stringIsNull(questionStr)) {
+					String[] questionArray = questionStr.split(",");
+					for (int m = 0; m < questionArray.length; m++) {
+						String answer = questionArray[m];
+						if (!StringUtil.stringIsNull(answer)) {
+							if (!map.containsKey(i + "_" + answer)) {
+								QuestionData questionData = new QuestionData();
+								questionData.questionNum = i;
+								questionData.answer = answer;
+								questionData.answerNum = 1;
+								questionData.input1List.add(questionNaire.getInput1());
+								questionData.input2List.add(questionNaire.getInput2());
+								map.put(i + "_" + answer, questionData);
+							} else {
+								QuestionData questionData = map.get(i + "_" + answer);
+								questionData.answerNum++;
+								questionData.input1List.add(questionNaire.getInput1());
+								questionData.input2List.add(questionNaire.getInput2());
+							}
+						}
+					}
+				}
+			}
+		}
+		ArrayList<QuestionData> array = new ArrayList<>();
+		Object[] keyArray = map.keySet().toArray();
+		for (int i = 0; i < keyArray.length; i++) {
+			String key = String.valueOf(keyArray[i]);
+			array.add(map.get(key));
+		}
+		for (int i = 0; i < array.size(); i++) {
+			for (int j = i + 1; j < array.size(); j++) {
+				QuestionData questionData = array.get(i);
+				QuestionData questionData1 = array.get(j);
+				if (questionData1.answerNum > questionData.answerNum) {
+					array.set(i, questionData1);
+					array.set(j, questionData);
+				}
+			}
+		}
+		GetQuestionTopAnswerS.Builder builder = GetQuestionTopAnswerS.newBuilder();
+		builder.setHOpCode(hSession.headParam.hOpCode);
+		int num = message.getNum();
+		if (num > array.size()) {
+			num = array.size();
+		}
+		for (int i = 0; i < num; i++) {
+			QuestionData question = array.get(i);
+			QuestionAnswerData.Builder builderData = QuestionAnswerData.newBuilder();
+			builderData.setAnswer(question.answer);
+			builderData.setAnswerNum(question.answerNum);
+			builderData.setQuestionNum(question.questionNum);
+			for (int j = 0; j < question.input1List.size(); j++) {
+				String input1 = question.input1List.get(j);
+				String input2 = question.input2List.get(j);
+				QuestionInput.Builder inputBuild = QuestionInput.newBuilder();
+				if(StringUtil.stringIsNull(input1)){
+					inputBuild.setInput1("null");
+				}else{
+					inputBuild.setInput1(input1);
+				}
+				inputBuild.setInput2(input2);
+				builderData.addInputList(inputBuild);
+			}
+			builder.addQuestionList(builderData);
+		}
+		builder.setQuestionType(message.getQuestionType());
 		HttpPacket packet = new HttpPacket(hSession.headParam.hOpCode, builder.build());
 		return packet;
 	}
