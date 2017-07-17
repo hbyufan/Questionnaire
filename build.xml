@@ -1,0 +1,37 @@
+﻿<?xml version="1.0"?>
+<project name="Work" basedir="." default="build">
+	<property file="build-custom.properties"/>
+	<property name="dist" location="${DistPath}" />
+	<property name="Work.dir" value="${WorkDir}" />
+	<property name="MsgExt.dir" value="${MsgExtDir}" />
+	<property name="DBLib.dir" value="${DBLibDir}" />
+	<property name="Server.dir" value="${ServerDir}" />
+	<property name="ConfigData.dir" value="${ConfigDataDir}" />
+	<target name="build-MsgExt" depends="">
+		<ant antfile="build-MsgExt.xml" dir="${MsgExt.dir}">
+		</ant>
+	</target>
+	<target name="build-DBLib" depends="">
+		<ant antfile="build-DBLib.xml" dir="${DBLib.dir}">
+		</ant>
+	</target>
+	<target name="build-Server" depends="">
+		<ant antfile="build-Server.xml" dir="${Server.dir}">
+		</ant>
+	</target>
+	<target name="cleandist" description="clean up">
+		<delete dir="${dist}" />
+	</target>
+	<target name="build">
+		<antcall target="cleandist" />
+		<antcall target="build-MsgExt" />
+		<antcall target="build-DBLib" />
+		<antcall target="build-Server" />
+		<mkdir dir="${dist}" />
+		<copy file="${Server.dir}/dist/ThreeCSSQuestion.war" todir="${dist}" />
+		<copy file="${MsgExt.dir}/dist/ThreeCSSQuestionMsg.jar" todir="${dist}" />
+		<copy file="${Server.dir}/src/ThreeCSSQuestion.properties" todir="${dist}" />
+		<copy file="${Work.dir}/threecssquestion.sql" todir="${dist}" />
+		<copydir dest="${dist}/ThreeCSSQuestionConfigData" src="${ConfigData.dir}"></copydir>
+	</target>
+</project>
