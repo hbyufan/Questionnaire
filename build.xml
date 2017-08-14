@@ -33,5 +33,6 @@
 		<copy file="${Server.dir}/src/ThreeCSSQuestion.properties" todir="${dist}" />
 		<copy file="${Work.dir}/threecssquestion.sql" todir="${dist}" />
 		<copydir dest="${dist}/ThreeCSSQuestionConfigData" src="${ConfigData.dir}"></copydir>
+		<copydir dest="${dist}/ThreeCSSQuestionClient" src="${Work.dir}/ThreeCSSQuestionClient"></copydir>
 	</target>
 </project>

@@ -8,9 +8,8 @@
 	<target name="generwar" depends="distServer">
 		<war destfile="${Server-dist}/ThreeCSSQuestion.war" webxml="${webxml}">
 			<fileset dir="${Server-WebContent}/">
+				<include name="html/**" />
 				<include name="js/**" />
-				<include name="css/**" />
-				<include name="fonts/**" />
 				<include name="*.html" />
 			</fileset>
 			<lib dir="${MsgExt.dir}/dist">
