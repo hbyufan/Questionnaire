@@ -1,5 +1,7 @@
 # threecss-question
 
+[![Build Status](https://travis-ci.org/dianbaer/threecss-question.svg?branch=master)](https://travis-ci.org/dianbaer/threecss-question)
+
 threecss-question是基于ThreeCSS分布式框架开发的一款调查问卷项目。
 
 
