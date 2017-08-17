@@ -1,6 +1,7 @@
 # threecss-question
 
 [![Build Status](https://travis-ci.org/dianbaer/threecss-question.svg?branch=master)](https://travis-ci.org/dianbaer/threecss-question)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/641d3337c25b413c8889c52703cebc7f)](https://www.codacy.com/app/232365732/threecss-question?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=dianbaer/threecss-question&amp;utm_campaign=Badge_Grade)
 
 threecss-question是基于ThreeCSS分布式框架开发的一款调查问卷项目。
 
