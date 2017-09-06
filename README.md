@@ -6,9 +6,6 @@
 threecss-question是基于ThreeCSS分布式框架开发的一款调查问卷项目。
 
 
-体验地址：
-https://question.threecss.com
-
 
 打版本：在项目根目录下，执行
 
