@@ -23,6 +23,8 @@ threecss-question是基于ThreeCSS分布式框架开发的一款调查问卷项�
 
 推荐环境：
 
+>快捷部署 https://github.com/dianbaer/deployment-server
+
 	jdk-8u121
 
 	apache-tomcat-8.5.12
