@@ -1,5 +1,6 @@
 # Questionnaire
 
+[![Build Status](https://travis-ci.org/dianbaer/Questionnaire.svg?branch=master)](https://travis-ci.org/dianbaer/Questionnaire)
 
 Questionnaire是一个调查问卷项目。
 
