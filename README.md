@@ -10,6 +10,9 @@ Questionnaire是一个调查问卷项目。
 
 https://github.com/dianbaer/grain
 
+	grain-httpserver
+	grain-mariadb
+
 
 打版本：在项目根目录下，执行
 
@@ -22,7 +25,7 @@ https://github.com/dianbaer/grain
 
 	dist/QuestionnaireConfig/mybatis-config.xml---访问调查问卷数据库
 
-	dist/QuestionnaireServer.properties----QuestionnaireConfig在服务器路径
+	dist/QuestionnaireServer.properties----QuestionnaireConfig在服务器路径及一些配置
 
 
 推荐环境：
