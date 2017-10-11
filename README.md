@@ -1,6 +1,8 @@
 # Questionnaire
 
 [![Build Status](https://travis-ci.org/dianbaer/Questionnaire.svg?branch=master)](https://travis-ci.org/dianbaer/Questionnaire)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/eb99600527704892aea51eddfac2010f)](https://www.codacy.com/app/232365732/Questionnaire?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=dianbaer/Questionnaire&amp;utm_campaign=Badge_Grade)
+![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 Questionnaire是一个调查问卷项目。
 
