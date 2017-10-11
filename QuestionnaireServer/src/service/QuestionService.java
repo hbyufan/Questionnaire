@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.grain.httpserver.HttpException;
 import org.grain.httpserver.HttpPacket;
 import org.grain.httpserver.IHttpListener;
 
@@ -35,42 +36,42 @@ public class QuestionService implements IHttpListener {
 		return map;
 	}
 
-	public HttpPacket questionAnswerHandle(HttpPacket httpPacket) {
+	public HttpPacket questionAnswerHandle(HttpPacket httpPacket) throws HttpException {
 		QuestionAnswerC message = (QuestionAnswerC) httpPacket.getData();
 		QuestionNaire questionNaire = QuestionAction.createQuestionNaire(message.getQuestionListList(), message.getQuestionOtherListList(), message.getInputListList(), message.getTextAreaListList(), message.getQuestionId());
 		if (questionNaire == null) {
 			return null;
 		}
 		QuestionAnswerS.Builder builder = QuestionAnswerS.newBuilder();
-		builder.setHOpCode(httpPacket.gethOpCode());
-		HttpPacket packet = new HttpPacket(httpPacket.gethOpCode(), builder.build());
+		builder.setHOpCode(httpPacket.hSession.headParam.hOpCode);
+		HttpPacket packet = new HttpPacket(httpPacket.hSession.headParam.hOpCode, builder.build());
 		return packet;
 	}
 
-	public HttpPacket getQuestionType(HttpPacket httpPacket) {
+	public HttpPacket getQuestionType(HttpPacket httpPacket) throws HttpException {
 		GetQuestionTypeC message = (GetQuestionTypeC) httpPacket.getData();
 		List<QuestionNaire> list = QuestionAction.getQuestionTypeList();
 		if (list == null) {
 			return null;
 		}
 		GetQuestionTypeS.Builder builder = GetQuestionTypeS.newBuilder();
-		builder.setHOpCode(httpPacket.gethOpCode());
+		builder.setHOpCode(httpPacket.hSession.headParam.hOpCode);
 		for (int i = 0; i < list.size(); i++) {
 			QuestionNaire questionNaire = list.get(i);
 			builder.addQuestionType(questionNaire.getQuestionId());
 		}
-		HttpPacket packet = new HttpPacket(httpPacket.gethOpCode(), builder.build());
+		HttpPacket packet = new HttpPacket(httpPacket.hSession.headParam.hOpCode, builder.build());
 		return packet;
 	}
 
-	public HttpPacket getQuestionAnswer(HttpPacket httpPacket) {
+	public HttpPacket getQuestionAnswer(HttpPacket httpPacket) throws HttpException {
 		GetQuestionAnswerC message = (GetQuestionAnswerC) httpPacket.getData();
 		List<QuestionNaire> list = QuestionAction.getQuestionAnswer(message.getQuestionType(), message.getQuestionNum());
 		if (list == null) {
 			return null;
 		}
 		GetQuestionAnswerS.Builder builder = GetQuestionAnswerS.newBuilder();
-		builder.setHOpCode(httpPacket.gethOpCode());
+		builder.setHOpCode(httpPacket.hSession.headParam.hOpCode);
 		Map<String, Integer> map = new HashMap<>();
 		for (int i = 0; i < list.size(); i++) {
 			QuestionNaire questionNaire = list.get(i);
@@ -146,11 +147,11 @@ public class QuestionService implements IHttpListener {
 		}
 		builder.setQuestionType(message.getQuestionType());
 		builder.setQuestionNum(message.getQuestionNum());
-		HttpPacket packet = new HttpPacket(httpPacket.gethOpCode(), builder.build());
+		HttpPacket packet = new HttpPacket(httpPacket.hSession.headParam.hOpCode, builder.build());
 		return packet;
 	}
 
-	public HttpPacket getQuestionTopAnswerHandle(HttpPacket httpPacket) {
+	public HttpPacket getQuestionTopAnswerHandle(HttpPacket httpPacket) throws HttpException {
 		GetQuestionTopAnswerC message = (GetQuestionTopAnswerC) httpPacket.getData();
 		List<QuestionNaire> list = QuestionAction.getQuestionAnswer(message.getQuestionType(), 0);
 		if (list == null) {
@@ -232,7 +233,7 @@ public class QuestionService implements IHttpListener {
 			}
 		}
 		GetQuestionTopAnswerS.Builder builder = GetQuestionTopAnswerS.newBuilder();
-		builder.setHOpCode(httpPacket.gethOpCode());
+		builder.setHOpCode(httpPacket.hSession.headParam.hOpCode);
 		int num = message.getNum();
 		if (num > array.size()) {
 			num = array.size();
@@ -258,7 +259,7 @@ public class QuestionService implements IHttpListener {
 			builder.addQuestionList(builderData);
 		}
 		builder.setQuestionType(message.getQuestionType());
-		HttpPacket packet = new HttpPacket(httpPacket.gethOpCode(), builder.build());
+		HttpPacket packet = new HttpPacket(httpPacket.hSession.headParam.hOpCode, builder.build());
 		return packet;
 	}
 }

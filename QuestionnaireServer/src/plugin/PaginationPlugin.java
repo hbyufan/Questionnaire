@@ -1,4 +1,4 @@
-package org.grain.mariadb;
+package plugin;
 
 import java.util.List;
 

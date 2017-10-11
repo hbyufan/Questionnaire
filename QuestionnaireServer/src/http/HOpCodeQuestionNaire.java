@@ -26,5 +26,6 @@ public class HOpCodeQuestionNaire {
 		HttpManager.addMapping(GET_QUESTION_TYPE, GetQuestionTypeC.class, GetQuestionTypeS.class);
 		HttpManager.addMapping(GET_QUESTION_ANSWER, GetQuestionAnswerC.class, GetQuestionAnswerS.class);
 		HttpManager.addMapping(GET_QUESTION_TOP_ANSWER, GetQuestionTopAnswerC.class, GetQuestionTopAnswerS.class);
+
 	}
 }

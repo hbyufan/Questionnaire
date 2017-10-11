@@ -26,14 +26,13 @@ public class Expand implements IExpandServer {
 		TimeZone.setDefault(TimeZone.getTimeZone("Asia/Shanghai"));
 		ServletContext servletContext = servlet.getServletContext();
 		String configFileName = servletContext.getInitParameter("configFileName");
-		Properties properties = this.loadConfig(configFileName);
+		Properties properties = loadConfig(configFileName);
 		MybatisManager.init(properties.getProperty("config_dir"), "mybatis-config.xml", new MariadbLog());
 		HOpCodeQuestionNaire.init();
 		HttpManager.addHttpListener(new QuestionService());
 	}
 
 	private Properties loadConfig(String configFileName) throws Exception {
-
 		HttpConfig.log.info("初始化基础配置文件");
 		InputStream inputStream = null;
 		URL url = this.getClass().getClassLoader().getResource(configFileName);

@@ -134,9 +134,7 @@ public class QuestionAction {
 			QuestionNaireMapper questionNaireMapper = sqlSession.getMapper(QuestionNaireMapper.class);
 			int result = questionNaireMapper.insert(questionNaire);
 			if (result == 0) {
-				if (MybatisManager.log != null) {
-					MybatisManager.log.warn("创建答案失败");
-				}
+				MybatisManager.log.warn("创建答案失败");
 				return null;
 			}
 			sqlSession.commit();
@@ -144,9 +142,7 @@ public class QuestionAction {
 			if (sqlSession != null) {
 				sqlSession.rollback();
 			}
-			if (MybatisManager.log != null) {
-				MybatisManager.log.error("创建答案异常", e);
-			}
+			MybatisManager.log.error("创建答案异常", e);
 			return null;
 		} finally {
 			if (sqlSession != null) {
@@ -163,9 +159,7 @@ public class QuestionAction {
 			QuestionNaireMapperExt questionNaireMapperExt = sqlSession.getMapper(QuestionNaireMapperExt.class);
 			List<QuestionNaire> list = questionNaireMapperExt.selectQuestionType();
 			if (list == null) {
-				if (MybatisManager.log != null) {
-					MybatisManager.log.warn("获取问题类型失败");
-				}
+				MybatisManager.log.warn("获取问题类型失败");
 				return null;
 			}
 			return list;
@@ -173,9 +167,7 @@ public class QuestionAction {
 			if (sqlSession != null) {
 				sqlSession.rollback();
 			}
-			if (MybatisManager.log != null) {
-				MybatisManager.log.error("获取问题类型失败", e);
-			}
+			MybatisManager.log.error("获取问题类型失败", e);
 			return null;
 		} finally {
 			if (sqlSession != null) {
@@ -229,9 +221,7 @@ public class QuestionAction {
 			}
 			List<QuestionNaire> list = questionNaireMapper.selectByExample(questionNaireCriteria);
 			if (list == null) {
-				if (MybatisManager.log != null) {
-					MybatisManager.log.warn("获取单个问题答案列表失败");
-				}
+				MybatisManager.log.warn("获取单个问题答案列表失败");
 				return null;
 			}
 			return list;
@@ -239,9 +229,7 @@ public class QuestionAction {
 			if (sqlSession != null) {
 				sqlSession.rollback();
 			}
-			if (MybatisManager.log != null) {
-				MybatisManager.log.error("获取单个问题答案列表异常", e);
-			}
+			MybatisManager.log.error("获取单个问题答案列表异常", e);
 			return null;
 		} finally {
 			if (sqlSession != null) {
