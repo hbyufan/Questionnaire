@@ -4,9 +4,9 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/eb99600527704892aea51eddfac2010f)](https://www.codacy.com/app/232365732/Questionnaire?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=dianbaer/Questionnaire&amp;utm_campaign=Badge_Grade)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-Questionnaire是一个调查问卷项目。
+# Questionnaire是一个调查问卷项目。
 
-基于grain
+### 基于grain RPC框架
 
 https://github.com/dianbaer/grain
 
@@ -14,21 +14,34 @@ https://github.com/dianbaer/grain
 	grain-mariadb
 
 
-打版本：在项目根目录下，执行
+# 打版本：在项目根目录下，执行
 
 	ant
 
 
-配置：
-
-	dist/QuestionnaireClient/js/app/Url.js-----访问调查问卷服务器
-
-	dist/QuestionnaireConfig/mybatis-config.xml---访问调查问卷数据库
-
-	dist/QuestionnaireServer.properties----QuestionnaireConfig在服务器路径及一些配置
+# 配置：
 
 
-推荐环境：
+dist/QuestionnaireClient/js/app/Url.js-----访问调查问卷服务器
+
+	function Url() {
+		//调查文件服务器地址
+		this.url = "http://localhost:8080/QuestionnaireServer/s";
+	}
+	$T.url = new Url();
+
+
+dist/QuestionnaireConfig/mybatis-config.xml---访问调查问卷数据库
+
+
+dist/QuestionnaireServer.properties----QuestionnaireConfig在服务器路径及一些配置
+
+	#mybatis-config.xml在服务器的地址
+	config_dir = C:/Users/admin/Desktop/github/Questionnaire/trunk/QuestionnaireConfig
+
+
+
+# 推荐环境：
 
 >快捷部署 https://github.com/dianbaer/deployment-server
 
@@ -41,7 +54,7 @@ https://github.com/dianbaer/grain
 	CentOS-7-1611
 
 
-发布项目：
+# 发布项目：
 
 1、安装数据库
 	
@@ -66,7 +79,7 @@ https://github.com/dianbaer/grain
 	/home/tomcat/webapps/QuestionnaireClient
 
 
-Questionnaire功能：
+# Questionnaire功能：
 
 1、提供API：
 	
